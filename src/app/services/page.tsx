@@ -347,10 +347,6 @@ export default function ServicesPage() {
                   flight delegations, overseas travelers, and families with
                   extensive suitcases and baggage.
                 </p>
-                <p className={styles.disclaimerPill}>
-                  *Flight tracking and scheduled terminal delivery coordinated
-                  directly upon WhatsApp enquiry.
-                </p>
                 <div className={styles.cardFooter}>
                   <Link
                     href="/fleet/maruti-ertiga"
@@ -389,10 +385,6 @@ export default function ServicesPage() {
                   electronic FASTag toll devices, generous daily kilometer
                   packages, and robust suspension for long highway cruising.
                 </p>
-                <p className={styles.disclaimerPill}>
-                  *Inter-state border permits and multi-day packages confirmed
-                  directly upon enquiry.
-                </p>
                 <div className={styles.cardFooter}>
                   <Link
                     href="/fleet/mahindra-scorpio-n"
@@ -430,10 +422,6 @@ export default function ServicesPage() {
                   City and Hyundai Verna. Tailored self-drive rental agreements
                   for visiting executives, consultants, and business
                   delegations with consolidated GST invoicing.
-                </p>
-                <p className={styles.disclaimerPill}>
-                  *Corporate billing terms, dedicated account support, and
-                  multi-week contracts available.
                 </p>
                 <div className={styles.cardFooter}>
                   <Link

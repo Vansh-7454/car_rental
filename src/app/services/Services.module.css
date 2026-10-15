@@ -606,13 +606,6 @@
   color: var(--text-light-muted);
 }
 
-.disclaimerPill {
-  font-size: 0.75rem;
-  line-height: 1.4;
-  color: var(--color-orange);
-  font-style: italic;
-}
-
 .cardFooter {
   padding-top: 0.75rem;
   border-top: 1px solid var(--color-sage-divider);
