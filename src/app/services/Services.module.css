@@ -607,20 +607,35 @@
 }
 
 .cardFooter {
-  padding-top: 0.75rem;
+  padding-top: 1rem;
+  margin-top: auto;
   border-top: 1px solid var(--color-sage-divider);
 }
 
 .cardDetailLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.6875rem 1.125rem;
+  background-color: rgba(247, 244, 235, 0.05);
+  border: 1px solid var(--color-sage-border);
+  color: var(--color-ivory);
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--color-ivory);
-  transition: color var(--transition-fast);
+  border-radius: var(--radius-sm);
   text-decoration: none;
+  transition: all 260ms var(--ease-editorial);
+  text-align: center;
 }
 
 .cardDetailLink:hover {
-  color: var(--color-orange);
+  background-color: var(--color-orange);
+  border-color: var(--color-orange);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(232, 117, 61, 0.28);
 }
 
 /* 3. How It Works Section */
