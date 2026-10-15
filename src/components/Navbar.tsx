@@ -44,14 +44,91 @@ export default function Navbar() {
     setMobileMenuOpen(false);
   };
 
+  const [activeHash, setActiveHash] = useState<string>("");
+
+  // Track active section hash for pages with anchor links (e.g. /services vs /services#how-it-works)
+  useEffect(() => {
+    const syncHash = () => {
+      if (typeof window !== "undefined") {
+        setActiveHash(window.location.hash);
+      }
+    };
+
+    syncHash();
+    window.addEventListener("hashchange", syncHash);
+
+    if (pathname === "/services") {
+      const section = document.getElementById("how-it-works");
+      if (!section) {
+        return () => window.removeEventListener("hashchange", syncHash);
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActiveHash("#how-it-works");
+            } else {
+              const rect = section.getBoundingClientRect();
+              if (rect.top > 200) {
+                setActiveHash("");
+              }
+            }
+          });
+        },
+        {
+          rootMargin: "-80px 0px -40% 0px",
+          threshold: 0.1,
+        }
+      );
+
+      observer.observe(section);
+
+      return () => {
+        window.removeEventListener("hashchange", syncHash);
+        observer.disconnect();
+      };
+    } else {
+      setActiveHash("");
+      return () => window.removeEventListener("hashchange", syncHash);
+    }
+  }, [pathname]);
+
   const isLinkActive = (href: string) => {
     if (href === "/#fleet") {
       return pathname === "/";
     }
+    if (href === "/services") {
+      return pathname === "/services" && activeHash !== "#how-it-works";
+    }
     if (href === "/services#how-it-works") {
-      return pathname === "/services";
+      return pathname === "/services" && activeHash === "#how-it-works";
     }
     return pathname === href;
+  };
+
+  const handleLinkClick = (href: string) => {
+    closeMobileMenu();
+    if (href.includes("#")) {
+      const hash = href.substring(href.indexOf("#"));
+      if (pathname === "/services" && hash === "#how-it-works") {
+        setActiveHash("#how-it-works");
+        const el = document.getElementById("how-it-works");
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      } else if (pathname === "/" && hash === "#fleet") {
+        const el = document.getElementById("fleet");
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    } else if (href === "/services") {
+      setActiveHash("");
+      if (pathname === "/services") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
   };
 
   return (
@@ -91,6 +168,7 @@ export default function Navbar() {
                     href={item.href}
                     className={`${styles.navLink} ${active ? styles.navLinkActive : ""}`}
                     aria-current={active ? "page" : undefined}
+                    onClick={() => handleLinkClick(item.href)}
                   >
                     <span>{item.label}</span>
                     <span className={styles.linkUnderline} aria-hidden="true" />
@@ -173,7 +251,7 @@ export default function Navbar() {
                       className={`${styles.mobileNavLink} ${
                         active ? styles.mobileNavLinkActive : ""
                       }`}
-                      onClick={closeMobileMenu}
+                      onClick={() => handleLinkClick(item.href)}
                       aria-current={active ? "page" : undefined}
                     >
                       <span>{item.label}</span>

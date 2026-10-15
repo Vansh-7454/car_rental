@@ -60,6 +60,7 @@ html {
   color: var(--text-light);
   background-color: var(--color-petrol-dark);
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 16px);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
