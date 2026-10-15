@@ -170,8 +170,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Hero Bottom Tone Transition & Anchor for Step 2 Fleet */}
-      <div id="fleet" className={styles.bottomTransition} aria-hidden="true">
+      {/* Hero Bottom Tone Transition */}
+      <div className={styles.bottomTransition} aria-hidden="true">
         <div className={styles.bottomTransitionLine} />
       </div>
     </section>
