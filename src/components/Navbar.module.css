@@ -93,6 +93,15 @@
   margin-top: 2px;
 }
 
+@media (max-width: 380px) {
+  .brand {
+    gap: 0.5rem;
+  }
+  .brandName {
+    font-size: 1.0625rem;
+  }
+}
+
 /* Desktop Navigation */
 .desktopNav {
   display: none;

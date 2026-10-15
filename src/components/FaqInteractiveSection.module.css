@@ -118,6 +118,7 @@
   font-size: 0.8438rem;
   font-weight: 500;
   white-space: nowrap;
+  flex-shrink: 0;
   cursor: pointer;
   transition: all var(--transition-fast);
 }
@@ -509,5 +510,13 @@
 
   .categoryGroupTitle {
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .tabsContainer {
+    margin: 0 -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }

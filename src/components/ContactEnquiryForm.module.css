@@ -8,6 +8,12 @@
   overflow: hidden;
 }
 
+@media (max-width: 480px) {
+  .formCard {
+    padding: 1.5rem 1.125rem;
+  }
+}
+
 @media (min-width: 640px) {
   .formCard {
     padding: 3rem 2.5rem;

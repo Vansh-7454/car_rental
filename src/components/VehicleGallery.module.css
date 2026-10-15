@@ -61,6 +61,13 @@
   border-top: 1px solid var(--color-petrol-border);
 }
 
+@media (max-width: 640px) {
+  .captionBar {
+    padding: 0.625rem 0.875rem;
+    gap: 0.75rem;
+  }
+}
+
 .captionText {
   font-size: 0.8438rem;
   color: var(--color-ivory);
@@ -69,6 +76,13 @@
   line-height: 1.45;
   flex: 1;
   min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .captionText {
+    font-size: 0.75rem;
+    line-height: 1.35;
+  }
 }
 
 .counter {
@@ -80,12 +94,24 @@
   flex-shrink: 0;
 }
 
+@media (max-width: 640px) {
+  .counter {
+    font-size: 0.6875rem;
+  }
+}
+
 /* Symmetrical 3-Column Thumbnail Grid spanning 100% of Main Frame Width */
 .thumbnailRow {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.875rem;
   width: 100%;
+}
+
+@media (max-width: 640px) {
+  .thumbnailRow {
+    gap: 0.5rem;
+  }
 }
 
 .thumbnailButton {

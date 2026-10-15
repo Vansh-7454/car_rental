@@ -233,3 +233,18 @@
   color: rgba(247, 244, 235, 0.4);
   max-width: 580px;
 }
+
+@media (max-width: 480px) {
+  .footer {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .footerContainer {
+    gap: 2.25rem;
+  }
+
+  .footerGrid {
+    gap: 2rem;
+  }
+}

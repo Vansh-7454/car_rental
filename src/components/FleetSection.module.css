@@ -57,6 +57,8 @@
   }
 }
 
+
+
 .heading {
   font-size: 2.375rem;
   line-height: 1.1;
@@ -188,6 +190,7 @@
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -199,11 +202,9 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  background: linear-gradient(
-    145deg,
-    rgba(23, 75, 65, 0.5) 0%,
-    rgba(10, 36, 31, 0.95) 100%
-  );
+  background: linear-gradient(145deg,
+      rgba(23, 75, 65, 0.5) 0%,
+      rgba(10, 36, 31, 0.95) 100%);
   border: 1px solid var(--color-petrol-border-strong);
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -260,11 +261,9 @@
 .featuredImageOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(6, 24, 20, 0.1) 0%,
-    rgba(6, 24, 20, 0.4) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(6, 24, 20, 0.1) 0%,
+      rgba(6, 24, 20, 0.4) 100%);
   pointer-events: none;
 }
 
@@ -738,6 +737,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -968,6 +968,7 @@
 
 /* Reduced Motion Override */
 @media (prefers-reduced-motion: reduce) {
+
   .fleetComposition,
   .modalOverlay,
   .featuredImage,

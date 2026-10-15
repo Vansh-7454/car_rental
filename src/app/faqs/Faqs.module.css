@@ -96,11 +96,13 @@
 }
 
 .heroHeading {
-  font-size: 2.5rem;
-  line-height: 1.12;
+  font-size: clamp(2rem, 7vw, 2.5rem);
+  line-height: 1.15;
   color: var(--color-ivory);
   letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 @media (min-width: 768px) {
@@ -415,4 +417,30 @@
 
 .disclaimerNote strong {
   color: var(--color-ivory);
+}
+
+@media (max-width: 540px) {
+  .ctaCard {
+    padding: 2.25rem 1.25rem;
+  }
+
+  .ctaActions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ctaContactBtn,
+  .ctaFleetBtn,
+  .ctaWhatsappBtn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .floatingBadge {
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
 }

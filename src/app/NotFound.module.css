@@ -36,11 +36,12 @@
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: clamp(1.875rem, 6vw, 2.5rem);
   line-height: 1.15;
   color: var(--color-ivory);
   letter-spacing: -0.02em;
   margin-bottom: 1.25rem;
+  word-break: break-word;
 }
 
 @media (min-width: 768px) {
@@ -62,12 +63,14 @@
   gap: 1rem;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 @media (min-width: 640px) {
   .actionsRow {
     flex-direction: row;
     gap: 1.25rem;
+    width: auto;
   }
 }
 
@@ -110,6 +113,14 @@
   background-color: rgba(247, 244, 235, 0.12);
   border-color: var(--color-ivory);
   transform: translateY(-2px);
+}
+
+@media (max-width: 540px) {
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .btnArrow {
