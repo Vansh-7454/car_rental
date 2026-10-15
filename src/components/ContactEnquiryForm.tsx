@@ -115,7 +115,7 @@ export default function ContactEnquiryForm() {
               type="text"
               name="fullName"
               required
-              placeholder="e.g. Rahul Sharma"
+              placeholder="e.g. Vikram Patel"
               value={fullName}
               onChange={(e) => {
                 setFullName(e.target.value);
@@ -147,7 +147,7 @@ export default function ContactEnquiryForm() {
               type="tel"
               name="phone"
               required
-              placeholder="e.g. +91 98765 43210"
+              placeholder="e.g. +91 98201 12345"
               value={phone}
               onChange={(e) => {
                 setPhone(e.target.value);
@@ -177,7 +177,7 @@ export default function ContactEnquiryForm() {
               id={emailId}
               type="email"
               name="email"
-              placeholder="e.g. rahul@example.com"
+              placeholder="e.g. vikram@example.com"
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
