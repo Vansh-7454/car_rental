@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   FLEET_VEHICLES,
   CATEGORY_FILTERS,
-  Vehicle,
   VehicleCategory,
   getVehicleWhatsappUrl,
 } from "@/data/fleet";
@@ -13,8 +13,6 @@ import styles from "./FleetSection.module.css";
 
 export default function FleetSection() {
   const [activeCategory, setActiveCategory] = useState<VehicleCategory>("all");
-  const [selectedVehicleForModal, setSelectedVehicleForModal] =
-    useState<Vehicle | null>(null);
 
   // Filter vehicles based on active category
   const filteredVehicles =
@@ -25,14 +23,6 @@ export default function FleetSection() {
   // Identify featured vehicle for editorial prominence
   const featuredVehicle = filteredVehicles[0];
   const supportingVehicles = filteredVehicles.slice(1);
-
-  const handleOpenDetails = (vehicle: Vehicle) => {
-    setSelectedVehicleForModal(vehicle);
-  };
-
-  const handleCloseDetails = () => {
-    setSelectedVehicleForModal(null);
-  };
 
   return (
     <section
@@ -205,11 +195,10 @@ export default function FleetSection() {
                   </div>
                 </div>
 
-                {/* Actions */}
+                {/* Actions: View Details now routes directly to /fleet/[slug] */}
                 <div className={styles.actionRow}>
-                  <button
-                    type="button"
-                    onClick={() => handleOpenDetails(featuredVehicle)}
+                  <Link
+                    href={`/fleet/${featuredVehicle.slug}`}
                     className={styles.btnDetailsPrimary}
                     aria-label={`View detailed specifications for ${featuredVehicle.name}`}
                   >
@@ -226,7 +215,7 @@ export default function FleetSection() {
                     >
                       <path d="M4 10h12m-6-6 6 6-6 6" />
                     </svg>
-                  </button>
+                  </Link>
 
                   <a
                     href={getVehicleWhatsappUrl(featuredVehicle.name)}
@@ -257,7 +246,7 @@ export default function FleetSection() {
           {/* 2. Supporting Vehicles: Balanced Editorial Layout */}
           {supportingVehicles.length > 0 && (
             <div className={styles.supportingGrid}>
-              {supportingVehicles.map((vehicle, index) => (
+              {supportingVehicles.map((vehicle) => (
                 <article
                   key={vehicle.id}
                   id={`vehicle-${vehicle.slug}`}
@@ -355,16 +344,15 @@ export default function FleetSection() {
                       </li>
                     </ul>
 
-                    {/* Dual Action Controls */}
+                    {/* Dual Action Controls: View Details routes to /fleet/[slug] */}
                     <div className={styles.supportingActionRow}>
-                      <button
-                        type="button"
-                        onClick={() => handleOpenDetails(vehicle)}
+                      <Link
+                        href={`/fleet/${vehicle.slug}`}
                         className={styles.btnDetailsSecondary}
                         aria-label={`View details for ${vehicle.name}`}
                       >
                         <span>View Details</span>
-                      </button>
+                      </Link>
 
                       <a
                         href={getVehicleWhatsappUrl(vehicle.name)}
@@ -383,7 +371,7 @@ export default function FleetSection() {
                           strokeLinejoin="round"
                           aria-hidden="true"
                         >
-                          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
                         </svg>
                         <span>Enquire</span>
                       </a>
@@ -405,152 +393,6 @@ export default function FleetSection() {
           </p>
         </footer>
       </div>
-
-      {/* Accessible Vehicle Specification Modal (Step 2 Interactive Feature) */}
-      {selectedVehicleForModal && (
-        <div
-          className={styles.modalOverlay}
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="modal-vehicle-title"
-          onClick={handleCloseDetails}
-        >
-          <div
-            className={styles.modalCard}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              type="button"
-              className={styles.modalCloseButton}
-              onClick={handleCloseDetails}
-              aria-label="Close vehicle details modal"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className={styles.closeIcon}
-                aria-hidden="true"
-              >
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
-            </button>
-
-            <div className={styles.modalMediaWrapper}>
-              <Image
-                src={selectedVehicleForModal.imageSrc}
-                alt={selectedVehicleForModal.alt}
-                width={800}
-                height={450}
-                className={styles.modalImage}
-              />
-              <span className={styles.modalCategoryBadge}>
-                {selectedVehicleForModal.categoryLabel}
-              </span>
-            </div>
-
-            <div className={styles.modalBody}>
-              <div className={styles.modalHeaderGroup}>
-                <div>
-                  <h3
-                    id="modal-vehicle-title"
-                    className={`font-editorial ${styles.modalTitle}`}
-                  >
-                    {selectedVehicleForModal.name}
-                  </h3>
-                  <p className={styles.modalSubtitle}>
-                    {selectedVehicleForModal.subtitle}
-                  </p>
-                </div>
-                <div className={styles.modalPriceGroup}>
-                  <span className={styles.modalPrice}>
-                    {selectedVehicleForModal.priceFormatted}
-                  </span>
-                  <span className={styles.modalPriceUnit}>/ day*</span>
-                </div>
-              </div>
-
-              <div className={styles.modalPillars}>
-                <div className={styles.modalPillar}>
-                  <span className={styles.modalPillarKey}>Ideal Route</span>
-                  <span className={styles.modalPillarVal}>
-                    {selectedVehicleForModal.idealFor}
-                  </span>
-                </div>
-              </div>
-
-              <div className={styles.modalSpecsTable}>
-                <div className={styles.tableRow}>
-                  <span className={styles.tableKey}>Passenger Capacity</span>
-                  <span className={styles.tableVal}>
-                    {selectedVehicleForModal.capacity}
-                  </span>
-                </div>
-                <div className={styles.tableRow}>
-                  <span className={styles.tableKey}>Transmission</span>
-                  <span className={styles.tableVal}>
-                    {selectedVehicleForModal.transmission}
-                  </span>
-                </div>
-                <div className={styles.tableRow}>
-                  <span className={styles.tableKey}>Air Conditioning</span>
-                  <span className={styles.tableVal}>
-                    {selectedVehicleForModal.ac}
-                  </span>
-                </div>
-                <div className={styles.tableRow}>
-                  <span className={styles.tableKey}>Fuel Powertrain</span>
-                  <span className={styles.tableVal}>
-                    {selectedVehicleForModal.fuelType}
-                  </span>
-                </div>
-                <div className={styles.tableRow}>
-                  <span className={styles.tableKey}>Sanitisation Check</span>
-                  <span className={styles.tableVal}>
-                    Certified Pre-dispatch Multicheck
-                  </span>
-                </div>
-              </div>
-
-              <div className={styles.modalActions}>
-                <a
-                  href={getVehicleWhatsappUrl(selectedVehicleForModal.name)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.modalEnquireButton}
-                  onClick={handleCloseDetails}
-                >
-                  <svg
-                    className={styles.whatsappIcon}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-                  </svg>
-                  <span>Enquire on WhatsApp</span>
-                </a>
-
-                <button
-                  type="button"
-                  className={styles.modalDismissButton}
-                  onClick={handleCloseDetails}
-                >
-                  Close Preview
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

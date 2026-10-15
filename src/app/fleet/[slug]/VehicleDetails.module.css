@@ -1,0 +1,687 @@
+.mainContainer {
+  min-height: 100vh;
+  background-color: var(--color-petrol-dark);
+  padding-bottom: 6rem;
+}
+
+/* Breadcrumbs */
+.breadcrumbContainer {
+  padding-top: 1.75rem;
+  padding-bottom: 1.25rem;
+}
+
+.breadcrumbs {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-light-subtle);
+}
+
+.breadcrumbList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.breadcrumbItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.breadcrumbLink {
+  color: var(--text-light-muted);
+  transition: color var(--transition-fast);
+}
+
+.breadcrumbLink:hover {
+  color: var(--color-orange);
+}
+
+.breadcrumbDivider {
+  color: rgba(247, 244, 235, 0.25);
+}
+
+.breadcrumbActive {
+  color: var(--color-ivory);
+  font-weight: 600;
+}
+
+/* Presentation Section: 2-Column Desktop */
+.presentationSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  margin-bottom: 4.5rem;
+}
+
+@media (min-width: 1024px) {
+  .presentationSection {
+    grid-template-columns: 1.15fr 0.95fr;
+    gap: 3.5rem;
+  }
+}
+
+.galleryColumn {
+  width: 100%;
+}
+
+.infoColumn {
+  width: 100%;
+}
+
+.stickyPanel {
+  position: static;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .stickyPanel {
+    position: sticky;
+    top: calc(var(--header-height) + 1.5rem);
+  }
+}
+
+.categoryBadgeRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.875rem;
+}
+
+.categoryPill {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-orange);
+  background: rgba(232, 117, 61, 0.12);
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(232, 117, 61, 0.3);
+}
+
+.modelTag {
+  font-size: 0.8125rem;
+  color: var(--text-light-subtle);
+  font-weight: 500;
+}
+
+.vehicleTitle {
+  font-size: 2.25rem;
+  line-height: 1.15;
+  color: var(--color-ivory);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .vehicleTitle {
+    font-size: 2.75rem;
+  }
+}
+
+.vehicleDescription {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-light-muted);
+  margin-bottom: 1.75rem;
+}
+
+/* Tariff Box */
+.tariffCard {
+  background: linear-gradient(
+    145deg,
+    rgba(23, 75, 65, 0.45) 0%,
+    rgba(10, 36, 31, 0.9) 100%
+  );
+  border: 1px solid var(--color-petrol-border-strong);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tariffHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.375rem;
+}
+
+.tariffLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-light-subtle);
+}
+
+.tariffVerifiedPill {
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: var(--color-ivory);
+  background-color: rgba(247, 244, 235, 0.08);
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.tariffPriceGroup {
+  display: flex;
+  align-items: baseline;
+  gap: 0.375rem;
+  margin-bottom: 0.5rem;
+}
+
+.tariffAmount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-ivory);
+}
+
+.tariffUnit {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-orange);
+}
+
+.tariffDisclaimer {
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--text-light-subtle);
+}
+
+/* Quick Specs Strip */
+.quickSpecsStrip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.625rem;
+  margin-bottom: 1.75rem;
+}
+
+@media (min-width: 480px) {
+  .quickSpecsStrip {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.quickSpecPill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(247, 244, 235, 0.04);
+  border: 1px solid var(--color-petrol-border);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.625rem;
+}
+
+.specIcon {
+  font-size: 0.875rem;
+}
+
+.specText {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-ivory);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Actions */
+.actionsGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.enquireButtonPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 1rem 1.75rem;
+  background-color: var(--color-orange);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 14px rgba(232, 117, 61, 0.35);
+  transition: all var(--transition-normal);
+  text-decoration: none;
+}
+
+.enquireButtonPrimary:hover {
+  background-color: var(--color-orange-hover);
+  box-shadow: 0 6px 20px rgba(232, 117, 61, 0.5);
+  transform: translateY(-2px);
+}
+
+.whatsappIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.backToFleetLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem;
+  color: var(--text-light-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.backToFleetLink:hover {
+  color: var(--color-ivory);
+}
+
+.transparencyNote {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-light-subtle);
+  padding-top: 1rem;
+  border-top: 1px solid rgba(247, 244, 235, 0.08);
+}
+
+.transparencyDot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Section Shared Headers */
+.sectionTitleBlock {
+  margin-bottom: 2rem;
+}
+
+.subEyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-orange);
+  margin-bottom: 0.375rem;
+}
+
+.subHeading {
+  font-size: 1.875rem;
+  color: var(--color-ivory);
+}
+
+@media (min-width: 640px) {
+  .subHeading {
+    font-size: 2.25rem;
+  }
+}
+
+/* Specs Section */
+.specsSection {
+  padding-top: 3.5rem;
+  margin-bottom: 4.5rem;
+  border-top: 1px solid var(--color-petrol-border);
+}
+
+.specsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 860px) {
+  .specsGrid {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+
+.specsTableCard,
+.featuresCard {
+  background: rgba(18, 61, 53, 0.4);
+  border: 1px solid var(--color-petrol-border);
+  border-radius: var(--radius-sm);
+  padding: 1.75rem;
+}
+
+.specsCardTitle {
+  font-family: var(--font-editorial), "Georgia", serif;
+  font-size: 1.25rem;
+  color: var(--color-ivory);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-petrol-border);
+}
+
+.specsDl {
+  display: flex;
+  flex-direction: column;
+}
+
+.dlRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(247, 244, 235, 0.06);
+  font-size: 0.875rem;
+}
+
+.dlRow:last-child {
+  border-bottom: none;
+}
+
+.dt {
+  color: var(--text-light-subtle);
+}
+
+.dd {
+  color: var(--color-ivory);
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Features List */
+.featureList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--text-light-muted);
+  line-height: 1.5;
+}
+
+.featureCheckIcon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-orange);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Use Cases Section */
+.useCasesSection {
+  margin-bottom: 4.5rem;
+}
+
+.useCasesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .useCasesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.useCaseCard {
+  background: rgba(18, 61, 53, 0.35);
+  border: 1px solid var(--color-petrol-border);
+  border-radius: var(--radius-sm);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.useCaseNumber {
+  font-family: var(--font-editorial), "Georgia", serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-orange);
+  letter-spacing: 0.08em;
+}
+
+.useCaseTitle {
+  font-size: 1.125rem;
+  color: var(--color-ivory);
+  font-weight: 600;
+}
+
+.useCaseDesc {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--text-light-muted);
+}
+
+/* FAQs Section */
+.faqsSection {
+  margin-bottom: 5rem;
+  padding-top: 3.5rem;
+  border-top: 1px solid var(--color-petrol-border);
+}
+
+.faqsIntro {
+  font-size: 0.9375rem;
+  color: var(--text-light-subtle);
+  margin-top: 0.5rem;
+  max-width: 580px;
+}
+
+.faqsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.faqCard {
+  background: rgba(18, 61, 53, 0.35);
+  border: 1px solid var(--color-petrol-border);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+}
+
+.faqQuestion {
+  font-size: 1.0625rem;
+  color: var(--color-ivory);
+  margin-bottom: 0.625rem;
+  font-weight: 600;
+}
+
+.faqAnswer {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-light-muted);
+}
+
+/* Related Vehicles Section */
+.relatedSection {
+  padding-top: 3.5rem;
+  border-top: 1px solid var(--color-petrol-border);
+}
+
+.relatedHeaderRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2.25rem;
+}
+
+.viewFullFleetLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-orange);
+  transition: all var(--transition-fast);
+}
+
+.viewFullFleetLink:hover {
+  color: var(--color-ivory);
+  transform: translateX(3px);
+}
+
+.viewArrow {
+  width: 16px;
+  height: 16px;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .relatedGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .relatedGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.relatedCard {
+  background: rgba(18, 61, 53, 0.4);
+  border: 1px solid var(--color-petrol-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), border-color var(--transition-normal);
+}
+
+.relatedCard:hover {
+  border-color: rgba(247, 244, 235, 0.28);
+  transform: translateY(-2px);
+}
+
+.relatedImageFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-petrol-deeper);
+  overflow: hidden;
+}
+
+.relatedImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 400ms var(--ease-editorial);
+}
+
+.relatedCard:hover .relatedImage {
+  transform: scale(1.03);
+}
+
+.relatedCategoryTag {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ivory);
+  background: rgba(10, 36, 31, 0.9);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(247, 244, 235, 0.15);
+}
+
+.relatedBody {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.relatedTitleRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.relatedName {
+  font-size: 1.125rem;
+  color: var(--color-ivory);
+}
+
+.relatedPrice {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-ivory);
+}
+
+.relatedUnit {
+  font-size: 0.6875rem;
+  color: var(--color-orange);
+}
+
+.relatedSub {
+  font-size: 0.75rem;
+  color: var(--text-light-subtle);
+}
+
+.relatedActionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(247, 244, 235, 0.06);
+}
+
+.relatedDetailsLink {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-ivory);
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--color-petrol-border);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.relatedDetailsLink:hover {
+  background: rgba(247, 244, 235, 0.08);
+  border-color: var(--color-ivory);
+}
+
+.relatedEnquirePill {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: var(--color-orange);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast);
+  text-decoration: none;
+}
+
+.relatedEnquirePill:hover {
+  background-color: var(--color-orange-hover);
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  .enquireButtonPrimary,
+  .relatedCard,
+  .relatedImage {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}

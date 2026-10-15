@@ -1,0 +1,119 @@
+.notFoundContainer {
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-petrol-dark);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.contentWrapper {
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eyebrowGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(232, 117, 61, 0.12);
+  border: 1px solid rgba(232, 117, 61, 0.3);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.5rem;
+}
+
+.eyebrowDot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-orange);
+  border-radius: 50%;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-orange);
+}
+
+.title {
+  font-size: 2.25rem;
+  line-height: 1.15;
+  color: var(--color-ivory);
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-light-muted);
+  margin-bottom: 2.5rem;
+}
+
+.actionsRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.625rem;
+  background-color: var(--color-orange);
+  color: #ffffff;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-normal);
+  text-decoration: none;
+}
+
+.primaryBtn:hover {
+  background-color: var(--color-orange-hover);
+  transform: translateY(-2px);
+}
+
+.btnArrow {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-fast);
+}
+
+.primaryBtn:hover .btnArrow {
+  transform: translateX(3px);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.875rem 1.5rem;
+  background-color: rgba(247, 244, 235, 0.05);
+  border: 1px solid var(--color-petrol-border-strong);
+  color: var(--color-ivory);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.secondaryBtn:hover {
+  background-color: rgba(247, 244, 235, 0.12);
+  border-color: var(--color-ivory);
+  color: #ffffff;
+}
