@@ -48,13 +48,23 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/fleet/toyota-innova-crysta" className={styles.footerLink}>
+                  Toyota Innova Crysta (7-Seater MPV)
+                </Link>
+              </li>
+              <li>
+                <Link href="/fleet/mahindra-thar" className={styles.footerLink}>
+                  Mahindra Thar (Adventure 4x4)
+                </Link>
+              </li>
+              <li>
                 <Link href="/fleet/hyundai-creta" className={styles.footerLink}>
                   Hyundai Creta (Compact SUV)
                 </Link>
               </li>
               <li>
-                <Link href="/fleet/hyundai-verna" className={styles.footerLink}>
-                  Hyundai Verna (Executive Sedan)
+                <Link href="/fleet/honda-city" className={styles.footerLink}>
+                  Honda City (Executive Sedan)
                 </Link>
               </li>
               <li>
