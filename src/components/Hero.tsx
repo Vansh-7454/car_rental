@@ -6,21 +6,28 @@ import styles from "./Hero.module.css";
 export default function Hero() {
   return (
     <section className={styles.heroSection} aria-labelledby="hero-heading">
-      {/* Subtle Architectural Grid Lines & Ambient Lighting Accent */}
-      <div className={styles.architecturalBackdrop} aria-hidden="true">
-        <div className={styles.ambientGlow} />
-        <div className={styles.gridLineHorizontal} />
-        <div className={styles.gridLineVertical} />
+      {/* Full-bleed Editorial Photographic Background (Stationary Executive Car) */}
+      <div className={styles.heroBackground} aria-hidden="true">
+        <Image
+          src={siteConfig.heroCar.imageSrc}
+          alt={siteConfig.heroCar.alt}
+          fill
+          priority
+          sizes="100vw"
+          className={styles.heroBackgroundImage}
+        />
+        {/* Layered gradients to guarantee 100% text readability & seamless edge blend */}
+        <div className={styles.gradientLeft} />
+        <div className={styles.gradientVertical} />
       </div>
 
       <div className={`container ${styles.heroContainer}`}>
-        {/* Editorial Left Content Column */}
-        <div className={styles.contentCol}>
+        <div className={styles.contentWrapper}>
           {/* Subtle Category Kicker */}
           <div className={styles.kickerBadge}>
             <span className={styles.kickerDot} aria-hidden="true" />
             <span className={styles.kickerText}>
-              Curated Indian Rental Fleet • Self-Drive & Chauffeur
+              Curated Indian Rental Fleet &bull; Self-Drive &amp; Chauffeur
             </span>
           </div>
 
@@ -33,9 +40,7 @@ export default function Hero() {
           </h1>
 
           {/* Concise, Confident Editorial Supporting Text */}
-          <p className={styles.subheadline}>
-            {siteConfig.subheadline}
-          </p>
+          <p className={styles.subheadline}>{siteConfig.subheadline}</p>
 
           {/* Dual Action Group */}
           <div className={styles.actionGroup}>
@@ -82,97 +87,20 @@ export default function Hero() {
               <span>Enquire on WhatsApp</span>
             </a>
           </div>
-
-          {/* Service Editorial Metrics / Pillars (No fake ratings or invented numbers) */}
-          <div className={styles.servicePillars} aria-label="Service Features">
-            {siteConfig.features.map((feature, idx) => (
-              <div key={feature.title} className={styles.pillarItem}>
-                <div className={styles.pillarIndex} aria-hidden="true">
-                  0{idx + 1}
-                </div>
-                <div className={styles.pillarContent}>
-                  <h2 className={styles.pillarTitle}>{feature.title}</h2>
-                  <p className={styles.pillarDescription}>{feature.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
-        {/* Visual Right Column: Fixed Photorealistic Car Composition (No moving car) */}
-        <div className={styles.visualCol}>
-          <div className={styles.visualComposition}>
-            {/* Primary Car Photographic Frame */}
-            <div className={styles.carFrame}>
-              <div className={styles.carImageWrapper}>
-                <Image
-                  src={siteConfig.heroCar.imageSrc}
-                  alt={siteConfig.heroCar.alt}
-                  width={1400}
-                  height={788}
-                  priority
-                  className={styles.carImage}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 760px"
-                />
-                {/* Subtle natural vignette and edge lighting integration */}
-                <div className={styles.imageOverlayGradient} aria-hidden="true" />
-              </div>
-
-              {/* Vehicle Editorial Caption Bar */}
-              <div className={styles.carCaptionBar}>
-                <div className={styles.carSpecGroup}>
-                  <span className={styles.carCategoryTag}>
-                    {siteConfig.heroCar.category}
-                  </span>
-                  <h3 className={styles.carModelName}>
-                    {siteConfig.heroCar.title}
-                  </h3>
-                </div>
-                <div className={styles.carSpecsMini}>
-                  <span className={styles.specPill}>
-                    {siteConfig.heroCar.transmission}
-                  </span>
-                  <span className={styles.specDivider} aria-hidden="true">•</span>
-                  <span className={styles.specPill}>
-                    {siteConfig.heroCar.seating}
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Secondary Photographic Detail: Tactile Interior Craftsmanship */}
-            <aside
-              className={styles.secondaryDetailCard}
-              aria-label="Vehicle Interior Preview"
-            >
-              <div className={styles.secondaryImageWrapper}>
-                <Image
-                  src={siteConfig.secondaryDetail.imageSrc}
-                  alt={siteConfig.secondaryDetail.alt}
-                  width={180}
-                  height={180}
-                  className={styles.secondaryImage}
-                  sizes="180px"
-                />
-                <div className={styles.secondaryBadge}>Detail</div>
-              </div>
-              <div className={styles.secondaryInfo}>
-                <span className={styles.secondarySubtitle}>
-                  {siteConfig.secondaryDetail.title}
-                </span>
-                <p className={styles.secondaryText}>
-                  {siteConfig.secondaryDetail.subtitle}
-                </p>
-                <div className={styles.accentBar} aria-hidden="true" />
-              </div>
-            </aside>
-          </div>
+        {/* Discreet Featured Vehicle Callout Badge (Lower Right) */}
+        <div className={styles.heroModelTag} aria-label="Featured vehicle">
+          <span className={styles.modelTagCategory}>
+            {siteConfig.heroCar.category}
+          </span>
+          <span className={styles.modelTagTitle}>
+            {siteConfig.heroCar.title}
+          </span>
+          <span className={styles.modelTagSpecs}>
+            {siteConfig.heroCar.transmission} &bull; {siteConfig.heroCar.seating}
+          </span>
         </div>
-      </div>
-
-      {/* Hero Bottom Tone Transition */}
-      <div className={styles.bottomTransition} aria-hidden="true">
-        <div className={styles.bottomTransitionLine} />
       </div>
     </section>
   );
