@@ -31,18 +31,22 @@
 
 .heroBackgroundImage {
   object-fit: cover;
-  object-position: 78% center;
+  object-position: 25% center;
+  transform: scale(1.05) translateX(5%);
+  transform-origin: center center;
 }
 
 @media (max-width: 1200px) {
   .heroBackgroundImage {
-    object-position: 72% center;
+    object-position: 25% center;
+    transform: scale(1.05) translateX(4%);
   }
 }
 
 @media (max-width: 768px) {
   .heroBackgroundImage {
-    object-position: center center;
+    object-position: 25% center;
+    transform: none;
   }
 }
 
@@ -53,10 +57,11 @@
   background: linear-gradient(
     90deg,
     #0a241f 0%,
-    rgba(10, 36, 31, 0.97) 35%,
-    rgba(10, 36, 31, 0.85) 52%,
-    rgba(10, 36, 31, 0.35) 75%,
-    rgba(10, 36, 31, 0.12) 100%
+    rgba(10, 36, 31, 0.95) 22%,
+    rgba(10, 36, 31, 0.68) 36%,
+    rgba(10, 36, 31, 0.16) 52%,
+    rgba(10, 36, 31, 0.02) 70%,
+    transparent 100%
   );
 }
 
