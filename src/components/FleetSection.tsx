@@ -78,7 +78,7 @@ export default function FleetSection() {
                 >
                   <span className={styles.filterLabel}>{cat.label}</span>
                   <span className={styles.filterCount} aria-hidden="true">
-                    0{count}
+                    {count < 10 ? `0${count}` : count}
                   </span>
                   {isActive && (
                     <span

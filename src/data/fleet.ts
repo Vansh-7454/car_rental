@@ -1,4 +1,4 @@
-export type VehicleCategory = "all" | "hatchbacks" | "sedans" | "suvs";
+export type VehicleCategory = "all" | "suvs" | "sedans" | "mpvs" | "hatchbacks";
 
 export interface GalleryItem {
   src: string;
@@ -21,7 +21,7 @@ export interface Vehicle {
   slug: string;
   name: string;
   subtitle: string;
-  category: "hatchbacks" | "sedans" | "suvs";
+  category: "hatchbacks" | "sedans" | "suvs" | "mpvs";
   categoryLabel: string;
   capacity: string;
   transmission: string;
@@ -49,10 +49,11 @@ export interface CategoryFilter {
 }
 
 export const CATEGORY_FILTERS: CategoryFilter[] = [
-  { id: "all", label: "All Cars" },
-  { id: "hatchbacks", label: "Hatchbacks" },
+  { id: "all", label: "All Vehicles" },
+  { id: "suvs", label: "SUVs & 4x4" },
   { id: "sedans", label: "Sedans" },
-  { id: "suvs", label: "SUVs" },
+  { id: "mpvs", label: "7-Seaters & MPVs" },
+  { id: "hatchbacks", label: "Hatchbacks" },
 ];
 
 export const FLEET_VEHICLES: Vehicle[] = [
@@ -521,6 +522,474 @@ export const FLEET_VEHICLES: Vehicle[] = [
         src: "/images/gallery-luggage.jpg",
         alt: "Maruti Brezza luggage boot with weekend duffel bags",
         caption: "Versatile Cargo — Split-folding Rear Bench for Outdoor Gear",
+      },
+    ],
+  },
+  {
+    id: "innova-crysta",
+    slug: "toyota-innova-crysta",
+    name: "Toyota Innova Crysta",
+    subtitle: "2.4L GD Turbo Diesel • VX / ZX 7-Seater",
+    category: "mpvs",
+    categoryLabel: "7-Seater MPV",
+    capacity: "7 Passengers",
+    transmission: "6-Speed Automatic & Manual",
+    ac: "Tri-Zone Automatic AC with Roof Vents",
+    fuelType: "Diesel (2.4L GD Turbo)",
+    luggage: "4 Large Suitcases + Soft Bags",
+    pricePerDay: 3800,
+    priceFormatted: "₹3,800",
+    priceNote: "Indicative sample rate per 24h cycle",
+    isFeatured: false,
+    imageSrc: "/images/fleet-innova.jpg",
+    alt: "Metallic bronze-gold Toyota Innova Crysta luxury 7-seater MPV parked in front of palace pavilion",
+    idealFor: "Flagship family vacations, VIP corporate transit, and long-distance inter-city touring",
+    description:
+      "The undisputed gold standard of Indian highway touring. Featuring plush second-row captain chairs, bulletproof 2.4-litre diesel durability, and whisper-quiet suspension compliance, the Innova Crysta turns multi-day journeys into effortless first-class travel.",
+    features: [
+      "Second-Row Ergonomic Captain Recliner Seats",
+      "Tri-Zone Independent Air Conditioning with Roof Vents",
+      "2.4L GD Intercooled Turbo Diesel with Eco/Power Modes",
+      "7 Airbags, Vehicle Stability Control & Hill-Start Assist",
+      "One-Touch Tumble 3rd-Row for Extended Cargo",
+      "Highway FASTag Electronic Toll Integration",
+    ],
+    useCases: [
+      {
+        title: "Family Golden Triangle & Hill Road Trips",
+        desc: "Seven adults travel in supreme comfort without compromising on legroom, luggage, or ride plushness.",
+      },
+      {
+        title: "Corporate & Executive Delegation",
+        desc: "Spacious, discreet, and refined transit between airports, business hubs, and luxury hotels.",
+      },
+      {
+        title: "Wedding & Special Event Concierge",
+        desc: "Dependable group mobility ensuring guests and family arrive relaxed and on schedule.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Is the 3rd row comfortable for adults on long drives?",
+        answer:
+          "Yes, the Innova Crysta features genuine three-row architecture with dedicated reclining backs and roof-mounted A/C vents for the rearmost passengers.",
+      },
+      {
+        question: "Does the vehicle require commercial driving permits?",
+        answer:
+          "Our self-drive Innova Crysta units operate on legal Indian self-drive white-on-black registration plates, drivable with a standard LMV driving licence.",
+      },
+      {
+        question: "What is the fuel policy?",
+        answer:
+          "Vehicles are handed over with a verified fuel level and simply returned at the same level upon trip completion.",
+      },
+    ],
+    gallery: [
+      {
+        src: "/images/fleet-innova.jpg",
+        alt: "Toyota Innova Crysta 7-seater MPV in palace driveway",
+        caption: "Flagship Stance — Refined Chrome Grille & Sculpted Road Presence",
+      },
+      {
+        src: "/images/gallery-cockpit.jpg",
+        alt: "Toyota Innova Crysta driver cockpit and steering console",
+        caption: "Driver Ergonomics — High Seating View & Intuitive Touchscreen Infotainment",
+      },
+      {
+        src: "/images/gallery-luggage.jpg",
+        alt: "Toyota Innova Crysta luggage bay with travel bags",
+        caption: "Deep Cargo Capacity — Expandable Flat-Fold 3rd Row",
+      },
+    ],
+  },
+  {
+    id: "scorpio-n-z8",
+    slug: "mahindra-scorpio-n",
+    name: "Mahindra Scorpio-N",
+    subtitle: "2.2L mHawk Turbo Diesel • Z8L 4x4",
+    category: "suvs",
+    categoryLabel: "Full-Size SUV",
+    capacity: "7 Passengers",
+    transmission: "6-Speed Torque Converter Automatic",
+    ac: "Dual-Zone Automatic Climate Control",
+    fuelType: "Diesel (2.2L mHawk 175 PS)",
+    luggage: "3 Large Bags + Weekend Duffles",
+    pricePerDay: 3500,
+    priceFormatted: "₹3,500",
+    priceNote: "Indicative sample rate per 24h cycle",
+    isFeatured: false,
+    imageSrc: "/images/fleet-scorpio.jpg",
+    alt: "Metallic midnight black Mahindra Scorpio-N SUV parked on scenic mountain highway in Western Ghats",
+    idealFor: "Mountain passes, monsoon highway road trips, and rugged terrain exploration",
+    description:
+      "A commanding full-size body-on-frame SUV engineered for uncompromising road presence. Powered by Mahindra's potent 175 PS mHawk diesel engine paired with advanced frequency-selective damping, the Scorpio-N devours bad roads, steep gradients, and highway miles with supreme confidence.",
+    features: [
+      "175 PS / 400 Nm 2.2L mHawk All-Aluminium Diesel Engine",
+      "4XPLOR Intelligent Terrain Management with Low Range",
+      "Pentalink Rear Suspension with Watt's Linkage",
+      "Sony 12-Speaker 3D Surround Audio Architecture",
+      "Electric Sunroof & Wireless Phone Charging",
+      "5-Star Global NCAP Adult Safety Rating",
+    ],
+    useCases: [
+      {
+        title: "Western Ghats & Monsoon Expeditions",
+        desc: "Tackle heavy rains, flooded road dips, and twisty mountain ghats with confidence.",
+      },
+      {
+        title: "Himalayan Circuit Touring",
+        desc: "High 187mm ground clearance and muscular low-end torque make high-altitude climbs effortless.",
+      },
+      {
+        title: "High-Presence Urban Commuting",
+        desc: "Commanding driver eye-level and imposing road stance grant effortless authority in city traffic.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Is this 4x4 automatic model suitable for snow and mud?",
+        answer:
+          "Yes, the Z8L 4XPLOR system includes selectable Terrain Modes (Grass/Gravel/Snow, Mud/Ruts, and Sand) along with low-range transfer case locks.",
+      },
+      {
+        question: "What type of fuel does this SUV require?",
+        answer:
+          "Standard ultra-low sulphur diesel (BS6 compliant). Active DEF levels are checked and verified before every dispatch.",
+      },
+      {
+        question: "Is there 24x7 roadside assistance included?",
+        answer:
+          "Yes, comprehensive pan-India roadside assistance (towing, flat tyre, jump start) is included with all Urban Motion rentals.",
+      },
+    ],
+    gallery: [
+      {
+        src: "/images/fleet-scorpio.jpg",
+        alt: "Mahindra Scorpio-N midnight black SUV in misty Western Ghats",
+        caption: "Commanding Stance — Muscular Silhouette & Signature Chrome Grille",
+      },
+      {
+        src: "/images/gallery-cockpit.jpg",
+        alt: "Mahindra Scorpio-N cockpit with digital dials and leatherette steering",
+        caption: "Premium Cockpit — Coffee-Black Leatherette & High Driving Position",
+      },
+      {
+        src: "/images/gallery-luggage.jpg",
+        alt: "Mahindra Scorpio-N rear luggage compartment",
+        caption: "Outdoor Ready — Flexible Luggage Space for Expeditions",
+      },
+    ],
+  },
+  {
+    id: "honda-city-zx",
+    slug: "honda-city",
+    name: "Honda City",
+    subtitle: "1.5L i-VTEC Petrol • ZX CVT Automatic",
+    category: "sedans",
+    categoryLabel: "Executive Sedan",
+    capacity: "5 Passengers",
+    transmission: "7-Speed Stepped CVT with Paddle Shift",
+    ac: "Automatic Climate Control with Rear Vents",
+    fuelType: "Petrol (1.5L i-VTEC DOHC)",
+    luggage: "506 Litres Boot Space",
+    pricePerDay: 2700,
+    priceFormatted: "₹2,700",
+    priceNote: "Indicative sample rate per 24h cycle",
+    isFeatured: false,
+    imageSrc: "/images/fleet-hondacity.jpg",
+    alt: "Pearl white Honda City executive sedan parked outside corporate pavilion in Gurgaon Cyber City",
+    idealFor: "Executive corporate itineraries, intercity expressways, and refined family touring",
+    description:
+      "The benchmark of Japanese automotive sophistication in India. Renowned for its silky-smooth 1.5-litre i-VTEC engine, class-leading rear sofa-like legroom, and an immense 506-litre trunk, the Honda City delivers poise, efficiency, and timeless executive grace.",
+    features: [
+      "1.5L DOHC i-VTEC Engine delivering 121 PS of Linear Power",
+      "7-Speed Stepped CVT with Steering Paddle Shifters",
+      "Honda Sensing ADAS with Adaptive Cruise Control",
+      "Class-Leading 506-Litre Enclosed Boot Volume",
+      "One-Touch Electric Sunroof & Ambient Lighting",
+      "LaneWatch Blind Spot Camera Display",
+    ],
+    useCases: [
+      {
+        title: "Intercity Expressway Cruising",
+        desc: "Cruise the Delhi-Mumbai or Bangalore-Mysore Expressways with whisper-quiet cabin acoustics.",
+      },
+      {
+        title: "Executive Business Commuting",
+        desc: "Generous rear legroom allows business travellers to work comfortably while on the move.",
+      },
+      {
+        title: "Airport Transit & Hotel Transfers",
+        desc: "The huge 506L trunk easily swallows family international luggage without compromising seating space.",
+      },
+    ],
+    faqs: [
+      {
+        question: "How comfortable is the rear seat for elderly passengers?",
+        answer:
+          "The Honda City is widely acclaimed for having the most comfortable, well-cushioned rear bench with optimal thigh support in its segment.",
+      },
+      {
+        question: "Does this vehicle feature Cruise Control for highway travel?",
+        answer:
+          "Yes, this ZX model includes Honda Sensing with Adaptive Cruise Control and Lane Keep Assist for effortless highway driving.",
+      },
+      {
+        question: "What documents are required to hire this car?",
+        answer:
+          "Valid Indian driving licence (or International Driving Permit), government photo ID (Aadhaar or Passport), and a security deposit verification.",
+      },
+    ],
+    gallery: [
+      {
+        src: "/images/fleet-hondacity.jpg",
+        alt: "Honda City pearl white sedan in modern Cyber City courtyard",
+        caption: "Aerodynamic Grace — Full LED Headlamps & Sharp Character Lines",
+      },
+      {
+        src: "/images/gallery-cockpit.jpg",
+        alt: "Honda City interior dashboard and steering wheel",
+        caption: "Ergonomic Cabin — Soft-Touch Leatherette & Digital Instrument Cluster",
+      },
+      {
+        src: "/images/gallery-luggage.jpg",
+        alt: "Honda City boot space with suitcases",
+        caption: "Class-Leading Trunk — 506 Litres of Flat Luggage Floor",
+      },
+    ],
+  },
+  {
+    id: "tata-nexon-fearless",
+    slug: "tata-nexon",
+    name: "Tata Nexon",
+    subtitle: "1.2L Turbocharged Revotron • Fearless+ DCA",
+    category: "suvs",
+    categoryLabel: "Compact SUV",
+    capacity: "5 Passengers",
+    transmission: "7-Speed Wet-Clutch DCA Automatic",
+    ac: "Automatic Temperature Control with Air Purifier",
+    fuelType: "Turbo Petrol (1.2L Revotron 120 PS)",
+    luggage: "382 Litres Boot Space",
+    pricePerDay: 2400,
+    priceFormatted: "₹2,400",
+    priceNote: "Indicative sample rate per 24h cycle",
+    isFeatured: false,
+    imageSrc: "/images/fleet-nexon.jpg",
+    alt: "Teal blue Tata Nexon compact SUV on scenic highway viewpoint at golden hour",
+    idealFor: "Urban commuting, coastal road trips, and safety-conscious weekend travel",
+    description:
+      "India's safety benchmark with a 5-Star BNCAP crash rating. Combining an energetic 120 PS turbo-petrol motor, high 208mm ground clearance, and a futuristic bi-LED digital cabin, the Nexon masters both bustling city lanes and unpredictable country highways.",
+    features: [
+      "5-Star Bharat NCAP & Global NCAP Certified Safety Shell",
+      "7-Speed Dual-Clutch Automatic with E-Shifter",
+      "High 208mm Ground Clearance with 350mm Water Wading",
+      "10.25-Inch Touchscreen Infotainment with Wireless CarPlay",
+      "360-Degree Surround View HD Camera",
+      "Drive Modes: Eco, City, and Sport with Distinct Throttling",
+    ],
+    useCases: [
+      {
+        title: "Daily Urban Navigation",
+        desc: "High eye-level and 360-degree cameras make parking and tight city alleyways a breeze.",
+      },
+      {
+        title: "Monsoon Coastal Drives",
+        desc: "208mm ground clearance ensures waterlogged sections and broken roads cause zero anxiety.",
+      },
+      {
+        title: "Couple & Small Family Getaways",
+        desc: "Spacious 5-seater layout with 382L luggage room for weekend camping or hill getaways.",
+      },
+    ],
+    faqs: [
+      {
+        question: "How safe is the Tata Nexon for highway trips?",
+        answer:
+          "The Nexon is one of India's highest safety-rated vehicles, equipped with 6 airbags as standard, ESP, roll-over mitigation, and a reinforced steel passenger cell.",
+      },
+      {
+        question: "Can I connect Apple CarPlay or Android Auto wirelessly?",
+        answer:
+          "Yes, the 10.25-inch high-resolution infotainment system supports wireless Apple CarPlay and Android Auto seamlessly.",
+      },
+      {
+        question: "Is there an allowance for extra kilometers?",
+        answer:
+          "Daily rentals include standard daily running allowances. Extended distance packages can be customized directly during WhatsApp enquiry.",
+      },
+    ],
+    gallery: [
+      {
+        src: "/images/fleet-nexon.jpg",
+        alt: "Tata Nexon teal blue SUV at golden hour scenic viewpoint",
+        caption: "Futuristic Architecture — Signature Bi-LED Headlamps & High Ground Clearance",
+      },
+      {
+        src: "/images/gallery-cockpit.jpg",
+        alt: "Tata Nexon cockpit and digital instrument cluster",
+        caption: "Digital Cockpit — Twin 10.25-Inch Screens & Two-Spoke Backlit Steering",
+      },
+      {
+        src: "/images/gallery-luggage.jpg",
+        alt: "Tata Nexon luggage boot with duffel bags",
+        caption: "382 Litres Trunk — Deep and Wide with 60:40 Split Seat Flexibility",
+      },
+    ],
+  },
+  {
+    id: "ertiga-zxi",
+    slug: "maruti-ertiga",
+    name: "Maruti Suzuki Ertiga",
+    subtitle: "1.5L K15C Smart Hybrid • ZXi Automatic",
+    category: "mpvs",
+    categoryLabel: "7-Seater MPV",
+    capacity: "7 Passengers",
+    transmission: "6-Speed Automatic with Paddle Shift",
+    ac: "Automatic Climate Control with Roof Vents",
+    fuelType: "Petrol (Smart Hybrid DualJet)",
+    luggage: "209L to 550L (Expandable 3rd Row)",
+    pricePerDay: 2500,
+    priceFormatted: "₹2,500",
+    priceNote: "Indicative sample rate per 24h cycle",
+    isFeatured: false,
+    imageSrc: "/images/fleet-ertiga.jpg",
+    alt: "Metallic silver Maruti Suzuki Ertiga 7-seater MPV outside modern airport terminal",
+    idealFor: "Budget-smart family holidays, airport transfers, and multi-generational city outings",
+    description:
+      "The smart, highly economical people-mover designed for hassle-free group mobility. Offering genuine 3-row comfort, breezy cabin cooling, and an ultra-refined 1.5-litre Smart Hybrid powertrain, the Ertiga is the go-to choice for effortless family journeys.",
+    features: [
+      "Smart Hybrid DualJet Engine delivering Outstanding Efficiency",
+      "Flexible 3-Row Seating with One-Touch Slide & Recline",
+      "Roof-Mounted Rear A/C with Independent 3-Speed Fan Control",
+      "Paddle Shifter Manual Override on Automatic Transmission",
+      "7-Inch SmartPlay Pro Infotainment with Smartphone Link",
+      "Keyless Entry & Push-Button Start/Stop",
+    ],
+    useCases: [
+      {
+        title: "Airport Pickup & Drop Coordination",
+        desc: "Generous passenger room and flat-folding 3rd-row seats effortlessly handle family airport transit.",
+      },
+      {
+        title: "Family Sightseeing & City Tours",
+        desc: "Nimble turning radius and light controls make navigating crowded historic city streets effortless.",
+      },
+      {
+        title: "Weekend Outstation Excursions",
+        desc: "Economical fuel consumption and reliable highway manners keep group road trips easy on the wallet.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Can all 7 seats fit adults comfortably?",
+        answer:
+          "Yes, the sliding 2nd row allows optimal legroom adjustment so that adult passengers in all three rows travel comfortably.",
+      },
+      {
+        question: "Is the A/C effective in peak summer heat?",
+        answer:
+          "The Ertiga features separate roof-mounted cooling blowers that direct chilled air directly to the 2nd and 3rd row passengers.",
+      },
+      {
+        question: "Can luggage fit with all 7 seats up?",
+        answer:
+          "With all 7 seats up, there is 209 litres for soft duffel bags. When traveling with fewer passengers, folding the 50:50 3rd row creates 550 litres of flat luggage space.",
+      },
+    ],
+    gallery: [
+      {
+        src: "/images/fleet-ertiga.jpg",
+        alt: "Maruti Suzuki Ertiga 7-seater MPV at airport terminal",
+        caption: "Clean Aerodynamic Profile — Chrome Wing Grille & Wide Aperture Doors",
+      },
+      {
+        src: "/images/gallery-cockpit.jpg",
+        alt: "Maruti Ertiga dashboard and multi-function steering",
+        caption: "Airy Dual-Tone Cabin — Teak Wood Accents & Crisp Instrument Dials",
+      },
+      {
+        src: "/images/gallery-luggage.jpg",
+        alt: "Maruti Ertiga luggage area with flat fold seating",
+        caption: "Flexible Space — Split-Folding 3rd Row for Bulky Travel Bags",
+      },
+    ],
+  },
+  {
+    id: "thar-lx-hardtop",
+    slug: "mahindra-thar",
+    name: "Mahindra Thar 4x4",
+    subtitle: "2.0L mStallion Turbo Petrol • LX Hardtop 4x4",
+    category: "suvs",
+    categoryLabel: "Adventure 4x4",
+    capacity: "4 Passengers",
+    transmission: "6-Speed Automatic 4WD with Low Range",
+    ac: "Electronic Automatic Climate Control",
+    fuelType: "Turbo Petrol (2.0L mStallion 150 PS)",
+    luggage: "2 Medium Duffles + Adventure Backpacks",
+    pricePerDay: 3200,
+    priceFormatted: "₹3,200",
+    priceNote: "Indicative sample rate per 24h cycle",
+    isFeatured: false,
+    imageSrc: "/images/fleet-thar.jpg",
+    alt: "Glossy black Mahindra Thar 4x4 hardtop SUV on scenic coastal dirt overlook in Goa India",
+    idealFor: "Goa coastal road trips, off-beat trails, scenic hill exploration, and experiential adventure",
+    description:
+      "India's definitive 4x4 adventure icon. With its bold upright silhouette, true mechanical transfer case with low range, washable interior flooring, and punchy 150 PS turbo petrol power, the Thar turns every road trip into an unforgettable story.",
+    features: [
+      "Authentic Shift-on-Fly 4WD with Mechanical Low-Range (4L)",
+      "Factory-Fitted Molded Factory Hardtop for Weather Insulation",
+      "IP54 Water & Dust Resistant Interior Switches & Infotainment",
+      "Heavy-Duty All-Terrain Wheels with 226mm Ground Clearance",
+      "Electronic Brake Locking Differential (BLD)",
+      "4-Star Global NCAP Adult Safety Certified Rating",
+    ],
+    useCases: [
+      {
+        title: "Goa & Coastal Exploration",
+        desc: "Unmatched personality cruising palm-lined coastal roads and sandy trail approaches.",
+      },
+      {
+        title: "Rajasthan & Desert Expeditions",
+        desc: "Tackle soft gravel, desert trails, and undulating rural tracks with ease.",
+      },
+      {
+        title: "Himalayan Weekend Escapes",
+        desc: "High clearance and rugged 4x4 mechanicals tackle unexpected landslides, slush, and snowfall.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Is this Thar hardtop or soft-top?",
+        answer:
+          "All Urban Motion rental units are factory-fitted insulated Hardtop models with full air-conditioning and electronic power windows for safety and comfort.",
+      },
+      {
+        question: "Can four adults sit comfortably?",
+        answer:
+          "Yes, this is the modern generation Thar with individual forward-facing rear seats with three-point seatbelts and ISOFIX mounts.",
+      },
+      {
+        question: "Are automatic transmission models available?",
+        answer:
+          "Yes, this model features a 6-speed torque-converter automatic paired with the refined 2.0L mStallion turbo petrol engine.",
+      },
+    ],
+    gallery: [
+      {
+        src: "/images/fleet-thar.jpg",
+        alt: "Mahindra Thar 4x4 in Goa sunset overlook",
+        caption: "Iconic Silhouette — Round LED Headlamps & High Ground Clearance",
+      },
+      {
+        src: "/images/gallery-cockpit.jpg",
+        alt: "Mahindra Thar driver cockpit and 4WD transfer lever",
+        caption: "Adventure Cockpit — Washable Floor, 4WD Lever & Adventure Dials",
+      },
+      {
+        src: "/images/gallery-luggage.jpg",
+        alt: "Mahindra Thar luggage space behind rear seats",
+        caption: "Adventure Cargo — Tailgate Swing Door with Split-Fold Rear Seats",
       },
     ],
   },
