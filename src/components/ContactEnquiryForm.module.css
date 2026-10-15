@@ -1,9 +1,9 @@
 .formCard {
   background-color: rgba(25, 78, 68, 0.25);
-  border: 1px solid var(--color-petrol-border-strong);
+  border: 1px solid var(--color-sage-border);
   border-radius: var(--radius-lg);
   padding: 2.25rem 1.75rem;
-  box-shadow: var(--shadow-editorial);
+  box-shadow: var(--shadow-sage-card);
   position: relative;
   overflow: hidden;
 }
@@ -94,12 +94,12 @@
   width: 100%;
   padding: 0.85rem 1.1rem;
   background-color: rgba(247, 244, 235, 0.05);
-  border: 1px solid var(--color-petrol-border);
+  border: 1px solid var(--color-sage-border);
   border-radius: var(--radius-sm);
   color: var(--color-ivory);
   font-family: var(--font-sans);
   font-size: 0.9375rem;
-  transition: border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition: border-color 260ms var(--ease-editorial), background-color 260ms var(--ease-editorial), box-shadow 260ms var(--ease-editorial);
 }
 
 .input::placeholder,

@@ -4,6 +4,11 @@
   display: flex;
   align-items: center;
   background-color: var(--color-petrol-dark);
+  background-image: radial-gradient(
+    ellipse 65% 55% at 88% 18%,
+    rgba(168, 185, 165, 0.04) 0%,
+    transparent 70%
+  );
   padding: 4rem 0;
   overflow: hidden;
 }
@@ -110,7 +115,7 @@
   background-color: rgba(247, 244, 235, 0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--color-petrol-border-strong);
+  border: 1px solid var(--color-sage-border);
   border-radius: var(--radius-full);
   width: fit-content;
   margin-bottom: 2rem;
@@ -262,13 +267,15 @@
   background-color: rgba(10, 36, 31, 0.72);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--color-petrol-border-strong);
+  border: 1px solid var(--color-sage-border);
   color: var(--color-ivory);
   font-size: 0.9375rem;
   font-weight: 600;
   letter-spacing: 0.01em;
   border-radius: var(--radius-sm);
-  transition: all var(--transition-normal);
+  box-shadow: 0 4px 14px rgba(6, 24, 20, 0.35);
+  transition: transform 260ms var(--ease-editorial), border-color 260ms var(--ease-editorial),
+    background-color 260ms var(--ease-editorial), box-shadow 260ms var(--ease-editorial);
   text-decoration: none;
   text-align: center;
 }
@@ -281,7 +288,8 @@
 
 .secondaryAction:hover {
   background-color: rgba(247, 244, 235, 0.14);
-  border-color: var(--color-ivory);
+  border-color: var(--color-sage-border-hover);
+  box-shadow: 0 8px 24px rgba(6, 24, 20, 0.5), 0 0 16px -4px rgba(168, 185, 165, 0.08);
   transform: translateY(-2px);
 }
 

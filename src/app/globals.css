@@ -18,6 +18,15 @@
   --color-orange-soft: rgba(232, 117, 61, 0.14);
   --color-orange-glow: rgba(232, 117, 61, 0.32);
 
+  /* Subtle Sage Green Supporting Accent (#A8B9A5) */
+  --color-sage: #a8b9a5;
+  --color-sage-border: rgba(168, 185, 165, 0.14);
+  --color-sage-border-hover: rgba(168, 185, 165, 0.28);
+  --color-sage-subtle: rgba(168, 185, 165, 0.05);
+  --color-sage-divider: rgba(168, 185, 165, 0.12);
+  --shadow-sage-card: 0 16px 36px -8px rgba(6, 24, 20, 0.45), 0 0 20px -4px rgba(168, 185, 165, 0.06);
+  --shadow-sage-hover: 0 22px 44px -10px rgba(6, 24, 20, 0.55), 0 0 26px -4px rgba(168, 185, 165, 0.10);
+
   /* Neutrals & text */
   --text-dark: #10211d;
   --text-dark-muted: #4e635d;

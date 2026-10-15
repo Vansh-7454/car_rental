@@ -9,9 +9,9 @@
   position: relative;
   border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1px solid var(--color-petrol-border-strong);
+  border: 1px solid var(--color-sage-border);
   background-color: var(--color-petrol-deeper);
-  box-shadow: var(--shadow-editorial);
+  box-shadow: var(--shadow-sage-card);
 }
 
 .imageWrapper {
@@ -58,7 +58,7 @@
   gap: 1.25rem;
   padding: 0.95rem 1.35rem;
   background: rgba(10, 36, 31, 0.95);
-  border-top: 1px solid var(--color-petrol-border);
+  border-top: 1px solid var(--color-sage-divider);
 }
 
 @media (max-width: 640px) {
@@ -120,15 +120,16 @@
   aspect-ratio: 16 / 9;
   border-radius: var(--radius-sm);
   overflow: hidden;
-  border: 1.5px solid var(--color-petrol-border);
+  border: 1.5px solid var(--color-sage-border);
   background-color: var(--color-petrol-deeper);
   cursor: pointer;
   padding: 0;
-  transition: all var(--transition-fast);
+  transition: all 260ms var(--ease-editorial);
 }
 
 .thumbnailButton:hover {
-  border-color: rgba(247, 244, 235, 0.4);
+  border-color: var(--color-sage-border-hover);
+  box-shadow: 0 4px 14px rgba(6, 24, 20, 0.4), 0 0 10px -2px rgba(168, 185, 165, 0.08);
   transform: translateY(-2px);
 }
 

@@ -1,6 +1,11 @@
 .footer {
   background-color: var(--color-petrol-deeper);
-  border-top: 1px solid var(--color-petrol-border-strong);
+  background-image: radial-gradient(
+    ellipse 60% 40% at 85% 0%,
+    rgba(168, 185, 165, 0.028) 0%,
+    transparent 70%
+  );
+  border-top: 1px solid var(--color-sage-divider);
   padding-top: 4.5rem;
   padding-bottom: 2.5rem;
   color: var(--text-light);
@@ -213,7 +218,7 @@
 /* Bottom Legal Row */
 .bottomRow {
   padding-top: 2rem;
-  border-top: 1px solid var(--color-petrol-border);
+  border-top: 1px solid var(--color-sage-divider);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;

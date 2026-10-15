@@ -1,8 +1,13 @@
 .fleetSection {
   position: relative;
   background-color: var(--color-petrol-dark);
+  background-image: radial-gradient(
+    ellipse 70% 50% at 12% 8%,
+    rgba(168, 185, 165, 0.035) 0%,
+    transparent 70%
+  );
   padding: 5rem 0 6rem 0;
-  border-top: 1px solid var(--color-petrol-border);
+  border-top: 1px solid var(--color-sage-divider);
   overflow: hidden;
 }
 
@@ -87,7 +92,7 @@
   gap: 1.25rem;
   padding-bottom: 2rem;
   margin-bottom: 3rem;
-  border-bottom: 1px solid var(--color-petrol-border);
+  border-bottom: 1px solid var(--color-sage-divider);
   width: 100%;
   max-width: 100%;
   min-width: 0;
@@ -127,20 +132,20 @@
   gap: 0.625rem;
   padding: 0.625rem 1.25rem;
   background-color: rgba(247, 244, 235, 0.04);
-  border: 1px solid var(--color-petrol-border);
+  border: 1px solid var(--color-sage-border);
   border-radius: var(--radius-full);
   color: var(--text-light-muted);
   font-size: 0.9375rem;
   font-weight: 500;
   white-space: nowrap;
-  transition: all var(--transition-normal);
+  transition: all 260ms var(--ease-editorial);
   cursor: pointer;
 }
 
 .filterTab:hover {
   background-color: rgba(247, 244, 235, 0.08);
   color: var(--color-ivory);
-  border-color: rgba(247, 244, 235, 0.25);
+  border-color: var(--color-sage-border-hover);
 }
 
 .filterTabActive {
@@ -213,11 +218,16 @@
   background: linear-gradient(145deg,
       rgba(23, 75, 65, 0.5) 0%,
       rgba(10, 36, 31, 0.95) 100%);
-  border: 1px solid var(--color-petrol-border-strong);
+  border: 1px solid var(--color-sage-border);
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-editorial);
-  transition: border-color var(--transition-normal);
+  box-shadow: var(--shadow-sage-card);
+  transition: border-color 260ms var(--ease-editorial), box-shadow 260ms var(--ease-editorial);
+}
+
+.featuredShowcase:hover {
+  border-color: var(--color-sage-border-hover);
+  box-shadow: var(--shadow-sage-hover);
 }
 
 @media (min-width: 1024px) {
@@ -351,7 +361,7 @@
   display: flex;
   flex-direction: column;
   background-color: rgba(247, 244, 235, 0.04);
-  border: 1px solid var(--color-petrol-border);
+  border: 1px solid var(--color-sage-border);
   padding: 0.875rem 1.125rem;
   border-radius: var(--radius-sm);
   width: fit-content;
@@ -395,7 +405,7 @@
   color: var(--text-light-muted);
   margin-bottom: 1.75rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--color-petrol-border);
+  border-bottom: 1px solid var(--color-sage-divider);
 }
 
 .idealForLabel {
@@ -424,7 +434,7 @@
   background: rgba(247, 244, 235, 0.03);
   padding: 0.625rem 0.75rem;
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(247, 244, 235, 0.06);
+  border: 1px solid var(--color-sage-border);
 }
 
 .specKey {
@@ -485,19 +495,21 @@
   gap: 0.625rem;
   padding: 0.875rem 1.5rem;
   background-color: rgba(247, 244, 235, 0.05);
-  border: 1px solid var(--color-petrol-border-strong);
+  border: 1px solid var(--color-sage-border);
   color: var(--color-ivory);
   font-size: 0.9375rem;
   font-weight: 600;
   border-radius: var(--radius-sm);
-  transition: all var(--transition-normal);
+  transition: transform 260ms var(--ease-editorial), background-color 260ms var(--ease-editorial),
+    border-color 260ms var(--ease-editorial), box-shadow 260ms var(--ease-editorial);
   text-decoration: none;
 }
 
 .btnEnquireSecondary:hover {
   background-color: rgba(247, 244, 235, 0.12);
-  border-color: var(--color-ivory);
+  border-color: var(--color-sage-border-hover);
   color: #ffffff;
+  box-shadow: 0 6px 18px rgba(6, 24, 20, 0.45), 0 0 14px -3px rgba(168, 185, 165, 0.08);
   transform: translateY(-2px);
 }
 
@@ -532,16 +544,16 @@
   display: flex;
   flex-direction: column;
   background: rgba(18, 61, 53, 0.45);
-  border: 1px solid var(--color-petrol-border);
+  border: 1px solid var(--color-sage-border);
   border-radius: var(--radius-sm);
   overflow: hidden;
-  transition: transform var(--transition-normal), border-color var(--transition-normal),
-    box-shadow var(--transition-normal);
+  transition: transform 260ms var(--ease-editorial), border-color 260ms var(--ease-editorial),
+    box-shadow 260ms var(--ease-editorial);
 }
 
 .supportingCard:hover {
-  border-color: rgba(247, 244, 235, 0.28);
-  box-shadow: 0 16px 36px -8px rgba(6, 24, 20, 0.4);
+  border-color: var(--color-sage-border-hover);
+  box-shadow: var(--shadow-sage-hover);
   transform: translateY(-3px);
 }
 
@@ -635,8 +647,8 @@
   gap: 0.75rem 1.25rem;
   list-style: none;
   padding: 0.75rem 0;
-  border-top: 1px solid rgba(247, 244, 235, 0.08);
-  border-bottom: 1px solid rgba(247, 244, 235, 0.08);
+  border-top: 1px solid var(--color-sage-divider);
+  border-bottom: 1px solid var(--color-sage-divider);
 }
 
 .specMiniItem {
@@ -668,20 +680,21 @@
   justify-content: center;
   padding: 0.5625rem 1rem;
   background-color: transparent;
-  border: 1px solid var(--color-petrol-border-strong);
+  border: 1px solid var(--color-sage-border);
   color: var(--color-ivory);
   font-size: 0.8125rem;
   font-weight: 600;
   border-radius: var(--radius-sm);
-  transition: all var(--transition-fast);
+  transition: all 260ms var(--ease-editorial);
   cursor: pointer;
   flex-grow: 1;
 }
 
 .btnDetailsSecondary:hover {
   background-color: rgba(247, 244, 235, 0.08);
-  border-color: var(--color-ivory);
+  border-color: var(--color-sage-border-hover);
   color: #ffffff;
+  box-shadow: 0 4px 12px rgba(6, 24, 20, 0.35), 0 0 10px -2px rgba(168, 185, 165, 0.06);
 }
 
 .btnEnquirePill {
@@ -714,7 +727,7 @@
 .fleetFooterDisclaimer {
   margin-top: 4rem;
   padding-top: 1.5rem;
-  border-top: 1px solid var(--color-petrol-border);
+  border-top: 1px solid var(--color-sage-divider);
   text-align: center;
 }
 
@@ -756,10 +769,10 @@
   width: 100%;
   max-width: 620px;
   background-color: var(--color-petrol-dark);
-  border: 1px solid var(--color-petrol-border-strong);
+  border: 1px solid var(--color-sage-border);
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.65);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.65), 0 0 24px -6px rgba(168, 185, 165, 0.08);
   max-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -900,7 +913,7 @@
 .modalSpecsTable {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--color-petrol-border);
+  border: 1px solid var(--color-sage-border);
   border-radius: var(--radius-sm);
   overflow: hidden;
 }
@@ -911,7 +924,7 @@
   justify-content: space-between;
   padding: 0.625rem 1rem;
   font-size: 0.8125rem;
-  border-bottom: 1px solid rgba(247, 244, 235, 0.06);
+  border-bottom: 1px solid var(--color-sage-divider);
 }
 
 .tableRow:last-child {
@@ -961,17 +974,18 @@
 .modalDismissButton {
   padding: 0.875rem 1.25rem;
   background: rgba(247, 244, 235, 0.06);
-  border: 1px solid var(--color-petrol-border);
+  border: 1px solid var(--color-sage-border);
   color: var(--color-ivory);
   font-size: 0.875rem;
   font-weight: 500;
   border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all 260ms var(--ease-editorial);
 }
 
 .modalDismissButton:hover {
   background: rgba(247, 244, 235, 0.12);
+  border-color: var(--color-sage-border-hover);
 }
 
 @media (max-width: 640px) {
