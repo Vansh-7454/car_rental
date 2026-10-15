@@ -423,16 +423,16 @@
   color: var(--color-orange);
 }
 
-/* Secondary Detail Card (Overlapping corner, tactile interior craftsmanship) */
+/* Secondary Detail Card (Tactile interior craftsmanship callout) */
 .secondaryDetailCard {
   position: absolute;
-  bottom: -2.5rem;
-  left: -1.5rem;
+  top: 1.25rem;
+  right: 1.25rem;
   display: none;
   align-items: center;
   gap: 1rem;
-  padding: 0.875rem;
-  background: rgba(18, 61, 53, 0.95);
+  padding: 0.875rem 1rem;
+  background: rgba(10, 36, 31, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(247, 244, 235, 0.2);
@@ -452,8 +452,8 @@
 
 @media (max-width: 1024px) {
   .secondaryDetailCard {
-    bottom: -1.75rem;
-    left: 1rem;
+    top: 1rem;
+    right: 1rem;
   }
 }
 
