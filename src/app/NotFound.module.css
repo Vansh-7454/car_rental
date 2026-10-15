@@ -1,0 +1,118 @@
+.notFoundContainer {
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-petrol-dark);
+  padding: 4rem 1.5rem;
+}
+
+.contentWrapper {
+  max-width: 640px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.eyebrowGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.eyebrowDot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-orange);
+}
+
+.eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-orange);
+}
+
+.title {
+  font-size: 2.5rem;
+  line-height: 1.15;
+  color: var(--color-ivory);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3.25rem;
+  }
+}
+
+.description {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--text-light-muted);
+  margin-bottom: 2.5rem;
+}
+
+.actionsRow {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .actionsRow {
+    flex-direction: row;
+    gap: 1.25rem;
+  }
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.85rem;
+  background-color: var(--color-orange);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  box-shadow: var(--shadow-button);
+  transition: all var(--transition-fast);
+}
+
+.primaryBtn:hover {
+  background-color: var(--color-orange-hover);
+  transform: translateY(-2px);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.85rem;
+  background-color: rgba(247, 244, 235, 0.06);
+  border: 1px solid var(--color-petrol-border-strong);
+  color: var(--color-ivory);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.secondaryBtn:hover {
+  background-color: rgba(247, 244, 235, 0.12);
+  border-color: var(--color-ivory);
+  transform: translateY(-2px);
+}
+
+.btnArrow {
+  width: 16px;
+  height: 16px;
+}

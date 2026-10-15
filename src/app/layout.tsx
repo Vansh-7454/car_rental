@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
+import Footer from "@/components/Footer";
 
 const sansFont = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -75,7 +76,10 @@ export default function RootLayout({
       className={`${sansFont.variable} ${editorialFont.variable}`}
       suppressHydrationWarning
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

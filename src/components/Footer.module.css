@@ -1,0 +1,235 @@
+.footer {
+  background-color: var(--color-petrol-deeper);
+  border-top: 1px solid var(--color-petrol-border-strong);
+  padding-top: 4.5rem;
+  padding-bottom: 2.5rem;
+  color: var(--text-light);
+  margin-top: auto;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 640px) {
+  .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footerGrid {
+    grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+    gap: 3.5rem;
+  }
+}
+
+/* Brand Column */
+.brandCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.875rem;
+  text-decoration: none;
+  margin-bottom: 1.25rem;
+  width: fit-content;
+}
+
+.brandMark {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--color-ivory);
+  border-radius: var(--radius-sm);
+  background: rgba(247, 244, 235, 0.05);
+}
+
+.brandMarkInner {
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid var(--color-ivory);
+  border-right: 2px solid var(--color-ivory);
+  transform: rotate(45deg);
+  display: block;
+}
+
+.brandMarkAccent {
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-orange);
+  border-radius: 50%;
+}
+
+.brandTextGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandName {
+  font-family: var(--font-editorial), "Georgia", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-ivory);
+  line-height: 1.1;
+}
+
+.brandDescriptor {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--text-light-subtle);
+  margin-top: 2px;
+}
+
+.brandTagline {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-orange);
+  margin-bottom: 0.75rem;
+}
+
+.brandDescription {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--text-light-muted);
+  max-width: 340px;
+}
+
+/* Nav Columns */
+.navCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.colHeading {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ivory);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.colHeadingDot {
+  width: 5px;
+  height: 5px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-orange);
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.footerLink {
+  font-size: 0.875rem;
+  color: var(--text-light-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.footerLink:hover {
+  color: var(--color-orange);
+  transform: translateX(2px);
+}
+
+/* Contact Column */
+.contactInfoList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contactItemLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-light-subtle);
+}
+
+.contactItemValue {
+  font-size: 0.875rem;
+  color: var(--color-ivory);
+  font-weight: 500;
+}
+
+.contactItemLink {
+  font-size: 0.875rem;
+  color: var(--color-orange);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.contactItemLink:hover {
+  color: var(--color-orange-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Bottom Legal Row */
+.bottomRow {
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-petrol-border);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .bottomRow {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.copyrightText {
+  font-size: 0.8125rem;
+  color: var(--text-light-subtle);
+  line-height: 1.5;
+}
+
+.disclaimerText {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: rgba(247, 244, 235, 0.4);
+  max-width: 580px;
+}

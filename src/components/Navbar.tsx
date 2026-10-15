@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -42,6 +44,16 @@ export default function Navbar() {
     setMobileMenuOpen(false);
   };
 
+  const isLinkActive = (href: string) => {
+    if (href === "/#fleet") {
+      return pathname === "/";
+    }
+    if (href === "/services#how-it-works") {
+      return pathname === "/services";
+    }
+    return pathname === href;
+  };
+
   return (
     <header
       className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}
@@ -71,14 +83,21 @@ export default function Navbar() {
           aria-label="Main Navigation"
         >
           <ul className={styles.navList}>
-            {siteConfig.navLinks.map((item) => (
-              <li key={item.label} className={styles.navItem}>
-                <Link href={item.href} className={styles.navLink}>
-                  <span>{item.label}</span>
-                  <span className={styles.linkUnderline} aria-hidden="true" />
-                </Link>
-              </li>
-            ))}
+            {siteConfig.navLinks.map((item) => {
+              const active = isLinkActive(item.href);
+              return (
+                <li key={item.label} className={styles.navItem}>
+                  <Link
+                    href={item.href}
+                    className={`${styles.navLink} ${active ? styles.navLinkActive : ""}`}
+                    aria-current={active ? "page" : undefined}
+                  >
+                    <span>{item.label}</span>
+                    <span className={styles.linkUnderline} aria-hidden="true" />
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
@@ -141,33 +160,39 @@ export default function Navbar() {
         <div className={styles.mobileDrawerContent}>
           <nav aria-label="Mobile Navigation">
             <ul className={styles.mobileNavList}>
-              {siteConfig.navLinks.map((item, index) => (
-                <li
-                  key={item.label}
-                  className={styles.mobileNavItem}
-                  style={{ animationDelay: `${index * 60 + 100}ms` }}
-                >
-                  <Link
-                    href={item.href}
-                    className={styles.mobileNavLink}
-                    onClick={closeMobileMenu}
+              {siteConfig.navLinks.map((item, index) => {
+                const active = isLinkActive(item.href);
+                return (
+                  <li
+                    key={item.label}
+                    className={styles.mobileNavItem}
+                    style={{ animationDelay: `${index * 60 + 100}ms` }}
                   >
-                    <span>{item.label}</span>
-                    <svg
-                      className={styles.mobileChevron}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
+                    <Link
+                      href={item.href}
+                      className={`${styles.mobileNavLink} ${
+                        active ? styles.mobileNavLinkActive : ""
+                      }`}
+                      onClick={closeMobileMenu}
+                      aria-current={active ? "page" : undefined}
                     >
-                      <path d="m9 18 6-6-6-6" />
-                    </svg>
-                  </Link>
-                </li>
-              ))}
+                      <span>{item.label}</span>
+                      <svg
+                        className={styles.mobileChevron}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
 

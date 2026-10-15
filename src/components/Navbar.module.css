@@ -148,6 +148,15 @@
   transform: scaleX(1);
 }
 
+.navLinkActive {
+  color: var(--color-ivory);
+  font-weight: 600;
+}
+
+.navLinkActive .linkUnderline {
+  transform: scaleX(1);
+}
+
 /* Action Group */
 .actionGroup {
   display: flex;
@@ -312,6 +321,17 @@
 .mobileNavLink:hover {
   color: var(--color-orange);
   border-color: rgba(232, 117, 61, 0.3);
+}
+
+.mobileNavLinkActive {
+  color: var(--color-orange);
+  font-weight: 700;
+  border-color: var(--color-orange);
+}
+
+.mobileNavLinkActive .mobileChevron {
+  opacity: 1;
+  color: var(--color-orange);
 }
 
 .mobileChevron {
