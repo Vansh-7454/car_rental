@@ -50,7 +50,7 @@ export const siteConfig: SiteConfig = {
     { label: "Fleet", href: "/#fleet" },
     { label: "Services", href: "/services" },
     { label: "How It Works", href: "/services#how-it-works" },
-    { label: "Tariff", href: "/#tariff" },
+    { label: "About", href: "/about" },
     { label: "Contact", href: "/#contact" },
   ],
   features: [
