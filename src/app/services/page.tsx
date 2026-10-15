@@ -164,13 +164,13 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          {/* Featured Service Spotlight: Weekend Getaways */}
+          {/* Featured Service Spotlight: Weekend Getaways & Adventure Road Trips */}
           <article className={styles.featuredServiceArticle}>
             <div className={styles.featuredServiceMedia}>
-              <div className={styles.featuredBadge}>Featured Use Case</div>
+              <div className={styles.featuredBadge}>Featured Adventure Service</div>
               <Image
-                src="/images/fleet-brezza.jpg"
-                alt="Maruti Suzuki Brezza compact SUV parked outside a Himalayan retreat"
+                src="/images/fleet-thar.jpg"
+                alt="Mahindra Thar 4x4 hardtop SUV on scenic coastal dirt overlook in Goa at sunset"
                 width={1000}
                 height={562}
                 className={styles.featuredServiceImage}
@@ -185,35 +185,36 @@ export default function ServicesPage() {
               </div>
 
               <h3 className={`font-editorial ${styles.serviceTitle}`}>
-                Weekend Getaways & Hill Station Tours
+                Weekend Getaways &amp; Adventure Road Trips
               </h3>
 
               <p className={styles.serviceText}>
                 Break away from city confines with vehicles engineered for
-                challenging terrain. High-ground-clearance compact SUVs and
-                supple touring crossovers handle steep mountain inclines,
-                unpaved scenic trails, and scenic coastal highways with total
-                confidence.
+                unbridled freedom and challenging terrain. Featuring the iconic
+                Mahindra Thar 4x4, Brezza, and Tata Nexon. High ground
+                clearance (200mm–226mm), all-weather factory hardtops, and
+                robust mechanicals handle coastal highways, Western Ghats
+                curves, and scenic trails with total confidence.
               </p>
 
               <div className={styles.serviceHighlightsList}>
                 <div className={styles.highlightPill}>
-                  ✓ 200mm+ Ground Clearance Available
+                  ✓ Authentic 4x4 &amp; 200mm+ Ground Clearance
                 </div>
                 <div className={styles.highlightPill}>
-                  ✓ Hill-Hold Assist & Traction Control
+                  ✓ Factory Insulated Hardtops with Powerful A/C
                 </div>
                 <div className={styles.highlightPill}>
-                  ✓ Generous Luggage Room for Camping & Bags
+                  ✓ Heavy-Duty All-Terrain Wheels &amp; Hill-Hold
                 </div>
               </div>
 
               <div className={styles.serviceActionRow}>
                 <Link
-                  href="/fleet/maruti-brezza"
+                  href="/fleet/mahindra-thar"
                   className={styles.viewVehicleBtn}
                 >
-                  <span>View Suitable Vehicle (Brezza)</span>
+                  <span>View Adventure 4x4 (Thar)</span>
                   <svg
                     viewBox="0 0 20 20"
                     fill="none"
@@ -229,7 +230,7 @@ export default function ServicesPage() {
                 </Link>
 
                 <a
-                  href={getVehicleWhatsappUrl("Brezza for Weekend Getaway")}
+                  href={getVehicleWhatsappUrl("Thar 4x4 for Weekend Getaway")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.whatsappEnquireLink}
@@ -261,12 +262,13 @@ export default function ServicesPage() {
                   <span className={styles.serviceStatusCore}>Core Use Case</span>
                 </div>
                 <h3 className={`font-editorial ${styles.cardTitle}`}>
-                  Daily City Travel & Urban Errands
+                  Daily City Travel &amp; Urban Errands
                 </h3>
                 <p className={styles.cardDesc}>
-                  Nimble, responsive hatchbacks engineered for bustling metro
-                  avenues, compact parking spots, and stop-and-go morning
-                  traffic. High fuel economy with effortless maneuverability.
+                  Nimble, responsive hatchbacks including the Swift and i20
+                  engineered for bustling metro avenues, tight parking spots,
+                  and stop-and-go morning traffic. High fuel economy with
+                  effortless automatic maneuverability.
                 </p>
                 <div className={styles.cardFooter}>
                   <Link
@@ -279,171 +281,166 @@ export default function ServicesPage() {
               </div>
             </article>
 
-            {/* 3. Family Travel */}
+            {/* 3. 7-Seater Family Travel */}
             <article className={styles.supportingServiceCard}>
               <div className={styles.cardImageWrapper}>
                 <Image
-                  src="/images/gallery-luggage.jpg"
-                  alt="Car boot packed with family suitcases and weekend duffels"
+                  src="/images/fleet-innova.jpg"
+                  alt="Toyota Innova Crysta luxury 7-seater MPV parked in front of palace pavilion"
                   width={600}
                   height={338}
                   className={styles.cardImage}
                   sizes="(max-width: 768px) 100vw, 420px"
                 />
-                <span className={styles.cardCategoryPill}>Family Travel</span>
+                <span className={styles.cardCategoryPill}>7-Seater MPV</span>
               </div>
               <div className={styles.cardBody}>
                 <div className={styles.serviceMeta}>
                   <span className={styles.serviceIndex}>03</span>
-                  <span className={styles.serviceStatusCore}>Core Use Case</span>
+                  <span className={styles.serviceStatusCore}>Flagship Service</span>
                 </div>
                 <h3 className={`font-editorial ${styles.cardTitle}`}>
-                  Family Travel & Vacation Mobility
+                  7-Seater Family Holidays &amp; Group Travel
                 </h3>
                 <p className={styles.cardDesc}>
-                  Roomy 5-seater cabins featuring dedicated rear air-conditioning
-                  vents, ISOFIX child seat anchor points, and deep trunk space
-                  to ensure the entire family travels in relaxed comfort.
+                  Featuring the legendary Toyota Innova Crysta and Maruti
+                  Ertiga. Genuine 3-row architecture, plush captain recliner
+                  seating, tri-zone roof air conditioning, and deep luggage
+                  capacity ensure large families and tour groups travel in
+                  relaxed harmony.
                 </p>
                 <div className={styles.cardFooter}>
                   <Link
-                    href="/fleet/hyundai-creta"
+                    href="/fleet/toyota-innova-crysta"
                     className={styles.cardDetailLink}
                   >
-                    <span>View Creta SX(O) →</span>
+                    <span>View Innova Crysta 7-Seater →</span>
                   </Link>
                 </div>
               </div>
             </article>
 
-            {/* 4. Airport Transfers (Proposed Service) */}
+            {/* 4. Airport Transfers */}
             <article className={styles.supportingServiceCard}>
               <div className={styles.cardImageWrapper}>
                 <Image
-                  src="/images/fleet-verna.jpg"
-                  alt="Executive sedan parked outside a luxury hotel pavilion"
+                  src="/images/fleet-ertiga.jpg"
+                  alt="Maruti Suzuki Ertiga 7-seater MPV outside modern airport terminal forecourt"
                   width={600}
                   height={338}
                   className={styles.cardImage}
                   sizes="(max-width: 768px) 100vw, 420px"
                 />
-                <span className={styles.cardCategoryPillProposed}>
-                  Pending Confirmation
-                </span>
+                <span className={styles.cardCategoryPill}>Airport Service</span>
               </div>
               <div className={styles.cardBody}>
                 <div className={styles.serviceMeta}>
                   <span className={styles.serviceIndex}>04</span>
-                  <span className={styles.serviceStatusProposed}>
-                    Proposed Service
-                  </span>
+                  <span className={styles.serviceStatusCore}>Popular Service</span>
                 </div>
                 <h3 className={`font-editorial ${styles.cardTitle}`}>
-                  Airport Terminal Handover
+                  Airport Terminal Handover &amp; Luggage Transit
                 </h3>
                 <p className={styles.cardDesc}>
-                  Convenient self-drive vehicle delivery and collection at
-                  airport arrival terminals.
+                  Seamless curb-side vehicle handover and return at domestic
+                  and international airport terminals. Accommodates arriving
+                  flight delegations, overseas travelers, and families with
+                  extensive suitcases and baggage.
                 </p>
                 <p className={styles.disclaimerPill}>
-                  *Service subject to operational confirmation and airport
-                  terminal delivery slots.
+                  *Flight tracking and scheduled terminal delivery coordinated
+                  directly upon WhatsApp enquiry.
                 </p>
                 <div className={styles.cardFooter}>
                   <Link
-                    href="/fleet/hyundai-verna"
+                    href="/fleet/maruti-ertiga"
                     className={styles.cardDetailLink}
                   >
-                    <span>View Verna SX →</span>
+                    <span>View Ertiga 7-Seater →</span>
                   </Link>
                 </div>
               </div>
             </article>
 
-            {/* 5. Outstation Travel (Proposed Service) */}
+            {/* 5. Outstation Highway Expeditions */}
             <article className={styles.supportingServiceCard}>
               <div className={styles.cardImageWrapper}>
                 <Image
-                  src="/images/fleet-creta.jpg"
-                  alt="Hyundai Creta compact SUV parked in an urban plaza"
+                  src="/images/fleet-scorpio.jpg"
+                  alt="Mahindra Scorpio-N 4x4 SUV parked on scenic mountain highway pass in Western Ghats"
                   width={600}
                   height={338}
                   className={styles.cardImage}
                   sizes="(max-width: 768px) 100vw, 420px"
                 />
-                <span className={styles.cardCategoryPillProposed}>
-                  Pending Confirmation
-                </span>
+                <span className={styles.cardCategoryPill}>Rugged SUV</span>
               </div>
               <div className={styles.cardBody}>
                 <div className={styles.serviceMeta}>
                   <span className={styles.serviceIndex}>05</span>
-                  <span className={styles.serviceStatusProposed}>
-                    Proposed Service
-                  </span>
+                  <span className={styles.serviceStatusCore}>Long Distance</span>
                 </div>
                 <h3 className={`font-editorial ${styles.cardTitle}`}>
-                  Outstation Highway Rentals
+                  Outstation Highway Expeditions &amp; Hills
                 </h3>
                 <p className={styles.cardDesc}>
-                  Multi-day self-drive rentals with structured daily kilometre
-                  packages and active electronic FASTag toll devices.
+                  Commanding 4x4 and high-ground-clearance SUVs including the
+                  Mahindra Scorpio-N and Tata Nexon. Equipped with active
+                  electronic FASTag toll devices, generous daily kilometer
+                  packages, and robust suspension for long highway cruising.
                 </p>
                 <p className={styles.disclaimerPill}>
-                  *State border permits and extended mileage allowances must be
-                  confirmed directly upon enquiry.
+                  *Inter-state border permits and multi-day packages confirmed
+                  directly upon enquiry.
                 </p>
                 <div className={styles.cardFooter}>
                   <Link
-                    href="/fleet/hyundai-creta"
+                    href="/fleet/mahindra-scorpio-n"
                     className={styles.cardDetailLink}
                   >
-                    <span>View Creta Details →</span>
+                    <span>View Scorpio-N 4x4 →</span>
                   </Link>
                 </div>
               </div>
             </article>
 
-            {/* 6. Corporate Travel (Proposed Service) */}
+            {/* 6. Corporate Mobility */}
             <article className={styles.supportingServiceCard}>
               <div className={styles.cardImageWrapper}>
                 <Image
-                  src="/images/hero-car.jpg"
-                  alt="Deep green executive sedan stationary in modern architectural courtyard"
+                  src="/images/fleet-hondacity.jpg"
+                  alt="Pearl white Honda City executive sedan parked outside corporate pavilion in Gurgaon Cyber City"
                   width={600}
                   height={338}
                   className={styles.cardImage}
                   sizes="(max-width: 768px) 100vw, 420px"
                 />
-                <span className={styles.cardCategoryPillProposed}>
-                  Pending Confirmation
-                </span>
+                <span className={styles.cardCategoryPill}>Executive Class</span>
               </div>
               <div className={styles.cardBody}>
                 <div className={styles.serviceMeta}>
                   <span className={styles.serviceIndex}>06</span>
-                  <span className={styles.serviceStatusProposed}>
-                    Proposed Service
-                  </span>
+                  <span className={styles.serviceStatusCore}>Business Transit</span>
                 </div>
                 <h3 className={`font-editorial ${styles.cardTitle}`}>
-                  Corporate Mobility Solutions
+                  Corporate Mobility &amp; Executive Delegation
                 </h3>
                 <p className={styles.cardDesc}>
-                  Tailored self-drive rental agreements for visiting executives,
-                  consultants, and corporate teams with consolidated GST
-                  invoicing.
+                  Sophisticated executive sedans including the benchmark Honda
+                  City and Hyundai Verna. Tailored self-drive rental agreements
+                  for visiting executives, consultants, and business
+                  delegations with consolidated GST invoicing.
                 </p>
                 <p className={styles.disclaimerPill}>
-                  *Corporate billing terms and multi-week agreements are
-                  arranged directly upon request.
+                  *Corporate billing terms, dedicated account support, and
+                  multi-week contracts available.
                 </p>
                 <div className={styles.cardFooter}>
                   <Link
-                    href="/fleet/hyundai-verna"
+                    href="/fleet/honda-city"
                     className={styles.cardDetailLink}
                   >
-                    <span>View Executive Fleet →</span>
+                    <span>View Honda City Executive →</span>
                   </Link>
                 </div>
               </div>
