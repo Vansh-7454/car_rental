@@ -268,49 +268,6 @@
   height: 18px;
 }
 
-/* Discreet Featured Vehicle Callout Badge (Lower Right) */
-.heroModelTag {
-  display: none;
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  padding: 0.85rem 1.25rem;
-  background-color: rgba(10, 36, 31, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--color-petrol-border-strong);
-  border-radius: var(--radius-md);
-  flex-direction: column;
-  gap: 0.2rem;
-  box-shadow: var(--shadow-editorial);
-}
-
-@media (min-width: 1024px) {
-  .heroModelTag {
-    display: flex;
-  }
-}
-
-.modelTagCategory {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-orange);
-}
-
-.modelTagTitle {
-  font-family: var(--font-editorial), "Georgia", serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--color-ivory);
-}
-
-.modelTagSpecs {
-  font-size: 0.75rem;
-  color: var(--text-light-subtle);
-}
-
 /* Reduced Motion Override */
 @media (prefers-reduced-motion: reduce) {
   .contentWrapper,

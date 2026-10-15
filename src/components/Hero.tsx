@@ -88,19 +88,6 @@ export default function Hero() {
             </a>
           </div>
         </div>
-
-        {/* Discreet Featured Vehicle Callout Badge (Lower Right) */}
-        <div className={styles.heroModelTag} aria-label="Featured vehicle">
-          <span className={styles.modelTagCategory}>
-            {siteConfig.heroCar.category}
-          </span>
-          <span className={styles.modelTagTitle}>
-            {siteConfig.heroCar.title}
-          </span>
-          <span className={styles.modelTagSpecs}>
-            {siteConfig.heroCar.transmission} &bull; {siteConfig.heroCar.seating}
-          </span>
-        </div>
       </div>
     </section>
   );
