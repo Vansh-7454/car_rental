@@ -6,6 +6,22 @@ export interface NavItem {
   href: string;
 }
 
+export interface ContactChannel {
+  label: string;
+  value: string;
+  href?: string;
+  isConfigured: boolean;
+  note: string;
+}
+
+export interface SiteContactInfo {
+  phone: ContactChannel;
+  whatsapp: ContactChannel;
+  email: ContactChannel;
+  address: ContactChannel;
+  operatingHours: ContactChannel;
+}
+
 export interface SiteConfig {
   brandName: string;
   legalEntity?: string;
@@ -14,6 +30,7 @@ export interface SiteConfig {
   whatsappMessage: string;
   whatsappUrl: string;
   navLinks: NavItem[];
+  contactInfo: SiteContactInfo;
   features: {
     title: string;
     description: string;
@@ -52,8 +69,46 @@ export const siteConfig: SiteConfig = {
     { label: "How It Works", href: "/services#how-it-works" },
     { label: "About", href: "/about" },
     { label: "FAQs", href: "/faqs" },
-    { label: "Contact", href: "/#contact" },
+    { label: "Contact", href: "/contact" },
   ],
+  contactInfo: {
+    phone: {
+      label: "Phone Support",
+      value: "Direct phone line available upon reservation confirmation",
+      // Set href once real verified business phone is provided, e.g. "tel:+919876543210"
+      href: undefined,
+      isConfigured: false,
+      note: "Shared directly with confirmed renters. For new enquiries, please connect via WhatsApp.",
+    },
+    whatsapp: {
+      label: "WhatsApp Concierge",
+      value: "Chat with Our Concierge",
+      href: "https://wa.me/?text=Hello%20Urban%20Motion%2C%20I%20would%20like%20to%20enquire%20about%20renting%20a%20car%20for%20my%20upcoming%20journey.",
+      isConfigured: true,
+      note: "Our most responsive channel for quick questions, rates, and availability.",
+    },
+    email: {
+      label: "Email Enquiries",
+      value: "enquiry@urbanmotion.in",
+      href: "mailto:enquiry@urbanmotion.in?subject=Rental%20Enquiry%20-%20Urban%20Motion",
+      isConfigured: true,
+      note: "For detailed corporate requests, multi-week itineraries, or partnership queries.",
+    },
+    address: {
+      label: "Operations & Delivery Hub",
+      value: "Central Operations Hub (Doorstep & Airport Delivery)",
+      href: undefined,
+      isConfigured: false,
+      note: "Physical hub handover bays are shared upon rental schedule confirmation. Sanitized doorstep delivery available.",
+    },
+    operatingHours: {
+      label: "Operating Hours",
+      value: "Monday – Sunday: 8:00 AM – 9:00 PM",
+      href: undefined,
+      isConfigured: true,
+      note: "Concierge desk open daily. Pre-scheduled vehicle handovers operate 24/7.",
+    },
+  },
   features: [
     {
       title: "Doorstep Delivery",

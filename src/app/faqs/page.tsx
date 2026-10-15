@@ -148,7 +148,7 @@ export default function FaqsPage() {
                 personalized quotations.
               </p>
               <div className={styles.ctaActions}>
-                <Link href="/#contact" className={styles.ctaContactBtn}>
+                <Link href="/contact" className={styles.ctaContactBtn}>
                   <span>Contact Us</span>
                 </Link>
 

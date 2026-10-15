@@ -1,0 +1,260 @@
+.formCard {
+  background-color: rgba(25, 78, 68, 0.25);
+  border: 1px solid var(--color-petrol-border-strong);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 1.75rem;
+  box-shadow: var(--shadow-editorial);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .formCard {
+    padding: 3rem 2.5rem;
+  }
+}
+
+.formHeader {
+  margin-bottom: 2rem;
+}
+
+.formEyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-orange);
+  margin-bottom: 0.5rem;
+}
+
+.formTitle {
+  font-size: 1.625rem;
+  color: var(--color-ivory);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+}
+
+.formSubtitle {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-light-muted);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .formGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .fullWidthCol {
+    grid-column: 1 / -1;
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.8438rem;
+  font-weight: 600;
+  color: var(--color-ivory);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.requiredAsterisk {
+  color: var(--color-orange);
+  margin-left: 0.25rem;
+}
+
+.optionalBadge {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-light-subtle);
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  background-color: rgba(247, 244, 235, 0.05);
+  border: 1px solid var(--color-petrol-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-ivory);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--text-light-subtle);
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  background-color: rgba(247, 244, 235, 0.08);
+  border-color: var(--color-orange);
+  box-shadow: 0 0 0 3px var(--color-orange-soft);
+}
+
+.inputError {
+  border-color: #f87171 !important;
+  background-color: rgba(239, 68, 68, 0.06) !important;
+}
+
+.inputError:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25) !important;
+}
+
+.errorMessage {
+  font-size: 0.7813rem;
+  color: #fca5a5;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+}
+
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f7f4eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 16px;
+  cursor: pointer;
+}
+
+.select option {
+  background-color: var(--color-petrol-dark);
+  color: var(--color-ivory);
+  padding: 0.5rem;
+}
+
+.textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.formActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 640px) {
+  .formActions {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.primarySubmitBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 0.95rem 1.75rem;
+  background-color: var(--color-orange);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-button);
+  transition: all var(--transition-fast);
+  flex: 1;
+}
+
+.primarySubmitBtn:hover {
+  background-color: var(--color-orange-hover);
+  transform: translateY(-1px);
+}
+
+.secondarySubmitBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 0.95rem 1.5rem;
+  background-color: rgba(247, 244, 235, 0.06);
+  border: 1px solid var(--color-petrol-border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--color-ivory);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.secondarySubmitBtn:hover {
+  background-color: rgba(247, 244, 235, 0.12);
+  border-color: var(--color-ivory);
+  color: #ffffff;
+}
+
+.btnIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* Dispatch Status Banner */
+.statusBanner {
+  margin-top: 1.5rem;
+  padding: 1.125rem 1.25rem;
+  background-color: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.statusIcon {
+  width: 20px;
+  height: 20px;
+  color: #4ade80;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.statusContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.statusTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4ade80;
+}
+
+.statusText {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--text-light-muted);
+}
+
+.statusDisclaimer {
+  font-size: 0.75rem;
+  color: var(--text-light-subtle);
+  margin-top: 0.25rem;
+}
