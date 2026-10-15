@@ -5,6 +5,9 @@
   padding-bottom: 2.5rem;
   color: var(--text-light);
   margin-top: auto;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .footerContainer {
@@ -17,6 +20,9 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 @media (min-width: 640px) {

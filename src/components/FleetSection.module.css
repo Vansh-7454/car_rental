@@ -88,6 +88,10 @@
   padding-bottom: 2rem;
   margin-bottom: 3rem;
   border-bottom: 1px solid var(--color-petrol-border);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -103,9 +107,13 @@
   align-items: center;
   gap: 0.5rem;
   overflow-x: auto;
+  overflow-y: hidden;
   padding-bottom: 4px;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .filterList::-webkit-scrollbar {
@@ -964,6 +972,102 @@
 
 .modalDismissButton:hover {
   background: rgba(247, 244, 235, 0.12);
+}
+
+@media (max-width: 640px) {
+  .heading {
+    font-size: clamp(1.875rem, 6vw, 2.375rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .featuredContent {
+    padding: 1.5rem 1.125rem;
+  }
+
+  .priceBlock {
+    width: 100%;
+  }
+
+  .specGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .specItem {
+    padding: 0.5rem 0.625rem;
+  }
+
+  .specVal {
+    font-size: 0.75rem;
+  }
+
+  .actionRow {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .btnDetailsPrimary,
+  .btnEnquireSecondary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .supportingBody {
+    padding: 1.25rem 1rem;
+    gap: 1rem;
+  }
+
+  .supportingActionRow {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+    gap: 0.625rem;
+  }
+
+  .btnDetailsSecondary,
+  .btnEnquirePill {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .supportingTitleRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .supportingPriceGroup {
+    align-items: flex-start;
+  }
+
+  .modalHeaderGroup {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .modalPriceGroup {
+    align-items: flex-start;
+  }
+
+  .modalActions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .modalEnquireButton,
+  .modalDismissButton {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 /* Reduced Motion Override */
