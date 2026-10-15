@@ -47,11 +47,11 @@ export const siteConfig: SiteConfig = {
   whatsappUrl:
     "https://wa.me/?text=Hello%20Urban%20Motion%2C%20I%20would%20like%20to%20enquire%20about%20renting%20a%20car%20for%20my%20upcoming%20journey.",
   navLinks: [
-    { label: "Fleet", href: "#fleet" },
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Tariff", href: "#tariff" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: "Fleet", href: "/#fleet" },
+    { label: "Services", href: "/services" },
+    { label: "How It Works", href: "/services#how-it-works" },
+    { label: "Tariff", href: "/#tariff" },
+    { label: "Contact", href: "/#contact" },
   ],
   features: [
     {
