@@ -598,7 +598,7 @@ export const FLEET_VEHICLES: Vehicle[] = [
       },
       {
         src: "/images/fleet-innova-rear.jpg",
-        alt: "Toyota Innova Crysta luxury 7-seater MPV rear view showing inverted L-shaped tail lamps and Crysta chrome garnish",
+        alt: "Metallic bronze-gold Toyota Innova Crysta luxury 7-seater MPV rear view showing inverted L-shaped tail lamps and Crysta chrome garnish",
         caption: "Rear Profile & 7-Seater Tailgate — Inverted L-Shaped Lamps & Chrome Crysta Garnish",
       },
     ],
