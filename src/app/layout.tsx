@@ -20,7 +20,7 @@ const editorialFont = Playfair_Display({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#123D35",
+  themeColor: "#292321",
   width: "device-width",
   initialScale: 1,
 };

@@ -19,8 +19,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(232, 117, 61, 0.12);
-  border: 1px solid rgba(232, 117, 61, 0.3);
+  background: rgba(196, 123, 85, 0.12);
+  border: 1px solid rgba(196, 123, 85, 0.3);
   padding: 0.3rem 0.75rem;
   border-radius: var(--radius-full);
   margin-bottom: 1.5rem;

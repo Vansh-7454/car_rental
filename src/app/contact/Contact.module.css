@@ -222,8 +222,8 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(10, 36, 31, 0.1) 0%,
-    rgba(10, 36, 31, 0.75) 100%
+    rgba(41, 35, 33, 0.1) 0%,
+    rgba(41, 35, 33, 0.75) 100%
   );
   pointer-events: none;
 }
@@ -234,10 +234,10 @@
   left: 1.25rem;
   right: 1.25rem;
   padding: 1rem 1.25rem;
-  background-color: rgba(10, 36, 31, 0.88);
+  background-color: rgba(54, 46, 43, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--color-sage-border);
+  border: 1px solid var(--color-stone-border);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -346,7 +346,7 @@
 .contactItemCard:hover {
   background-color: rgba(247, 244, 235, 0.05);
   border-color: var(--color-sage-border-hover);
-  box-shadow: 0 8px 24px -4px rgba(6, 24, 20, 0.4), 0 0 16px -4px rgba(168, 185, 165, 0.08);
+  box-shadow: 0 8px 24px -4px rgba(36, 12, 18, 0.45), 0 0 16px -4px rgba(183, 168, 154, 0.12);
 }
 
 .cardHeaderRow {
@@ -360,7 +360,7 @@
   width: 40px;
   height: 40px;
   border-radius: var(--radius-sm);
-  background-color: rgba(232, 117, 61, 0.12);
+  background-color: rgba(196, 123, 85, 0.15);
   color: var(--color-orange);
   display: flex;
   align-items: center;
@@ -433,10 +433,10 @@
 .guidanceCard {
   background: linear-gradient(
     135deg,
-    rgba(25, 78, 68, 0.6) 0%,
-    rgba(10, 36, 31, 0.95) 100%
+    #38302D 0%,
+    #251E1C 100%
   );
-  border: 1px solid var(--color-petrol-border-strong);
+  border: 1px solid var(--color-stone-border-strong);
   border-radius: var(--radius-lg);
   padding: 3.5rem 2rem;
   position: relative;

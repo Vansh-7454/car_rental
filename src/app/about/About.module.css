@@ -3,7 +3,7 @@
   background-color: var(--color-petrol-dark);
   background-image: radial-gradient(
     ellipse 65% 45% at 90% 12%,
-    rgba(168, 185, 165, 0.035) 0%,
+    rgba(183, 168, 154, 0.04) 0%,
     transparent 70%
   );
   padding-bottom: 6rem;
@@ -158,13 +158,13 @@
   border-radius: var(--radius-sm);
   transition: all var(--transition-normal);
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(232, 117, 61, 0.35);
+  box-shadow: 0 4px 14px rgba(196, 123, 85, 0.35);
   text-align: center;
 }
 
 .primaryFleetBtn:hover {
   background-color: var(--color-orange-hover);
-  box-shadow: 0 6px 20px rgba(232, 117, 61, 0.48);
+  box-shadow: 0 6px 20px rgba(196, 123, 85, 0.48);
   transform: translateY(-2px);
 }
 
@@ -234,7 +234,7 @@
   flex-direction: column;
   gap: 2px;
   padding: 0.875rem 1.25rem;
-  background: rgba(10, 36, 31, 0.95);
+  background: rgba(54, 46, 43, 0.95);
   border-top: 1px solid var(--color-petrol-border);
 }
 
@@ -314,8 +314,8 @@
 .editorialQuote {
   position: relative;
   padding: 1.5rem 1.75rem;
-  background: rgba(23, 75, 65, 0.35);
-  border-left: 3px solid var(--color-orange);
+  background: rgba(54, 46, 43, 0.5);
+  border-left: 3px solid var(--color-burgundy);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 
@@ -366,8 +366,8 @@
   align-items: center;
   gap: 1.125rem;
   padding: 1rem 1.25rem;
-  background: rgba(18, 61, 53, 0.7);
-  border: 1px solid var(--color-sage-border);
+  background: rgba(54, 46, 43, 0.88);
+  border: 1px solid var(--color-stone-border);
   border-radius: var(--radius-sm);
   backdrop-filter: blur(10px);
 }
@@ -439,19 +439,20 @@
 }
 
 .valueCard {
-  background: rgba(18, 61, 53, 0.4);
-  border: 1px solid var(--color-sage-border);
+  background: var(--color-cream);
+  border: 1px solid rgba(196, 123, 85, 0.28);
   border-radius: var(--radius-sm);
   padding: 2rem 1.75rem;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 10px 30px -10px rgba(36, 12, 18, 0.3);
   transition: transform 260ms var(--ease-editorial), border-color 260ms var(--ease-editorial),
     box-shadow 260ms var(--ease-editorial);
 }
 
 .valueCard:hover {
-  border-color: var(--color-sage-border-hover);
-  box-shadow: var(--shadow-sage-hover);
+  border-color: var(--color-copper);
+  box-shadow: 0 16px 36px -8px rgba(36, 12, 18, 0.45);
   transform: translateY(-3px);
 }
 
@@ -461,7 +462,7 @@
   justify-content: space-between;
   margin-bottom: 1.25rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--color-sage-divider);
+  border-bottom: 1px solid rgba(52, 40, 35, 0.12);
 }
 
 .valueNumber {
@@ -476,22 +477,22 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-ivory);
-  background: rgba(247, 244, 235, 0.08);
+  color: var(--color-burgundy);
+  background: rgba(114, 47, 55, 0.12);
   padding: 2px 6px;
   border-radius: 2px;
 }
 
 .valueTitle {
   font-size: 1.375rem;
-  color: var(--color-ivory);
+  color: var(--color-espresso);
   margin-bottom: 0.75rem;
 }
 
 .valueDesc {
   font-size: 0.875rem;
   line-height: 1.6;
-  color: var(--text-light-muted);
+  color: var(--color-espresso-muted);
 }
 
 /* 4. Customer Journey Section */
@@ -530,8 +531,8 @@
 
 .journeyStepItem {
   flex: 1;
-  background: rgba(18, 61, 53, 0.35);
-  border: 1px solid var(--color-sage-border);
+  background: linear-gradient(150deg, #38302D 0%, #2A2321 100%);
+  border: 1px solid var(--color-stone-border);
   border-radius: var(--radius-sm);
   padding: 1.75rem 1.5rem;
   display: flex;
@@ -614,14 +615,14 @@
 .ctaCard {
   background: linear-gradient(
     135deg,
-    rgba(23, 75, 65, 0.75) 0%,
-    rgba(10, 36, 31, 0.95) 100%
+    #38302D 0%,
+    #251E1C 100%
   );
-  border: 1px solid var(--color-sage-border);
+  border: 1px solid var(--color-stone-border-strong);
   border-radius: var(--radius-sm);
   padding: 2rem 1.25rem;
   text-align: center;
-  box-shadow: var(--shadow-sage-card);
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.5), 0 0 20px -4px rgba(222, 211, 195, 0.08);
 }
 
 @media (min-width: 640px) {
@@ -704,13 +705,13 @@
   border-radius: var(--radius-sm);
   transition: all var(--transition-normal);
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(232, 117, 61, 0.35);
+  box-shadow: 0 4px 14px rgba(196, 123, 85, 0.35);
   text-align: center;
 }
 
 .ctaPrimaryBtn:hover {
   background-color: var(--color-orange-hover);
-  box-shadow: 0 6px 20px rgba(232, 117, 61, 0.48);
+  box-shadow: 0 6px 20px rgba(196, 123, 85, 0.48);
   transform: translateY(-2px);
 }
 
@@ -736,7 +737,7 @@
   background-color: rgba(247, 244, 235, 0.12);
   border-color: var(--color-sage-border-hover);
   color: #ffffff;
-  box-shadow: 0 4px 16px rgba(6, 24, 20, 0.4), 0 0 12px -2px rgba(168, 185, 165, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 12px -2px rgba(222, 211, 195, 0.1);
   transform: translateY(-2px);
 }
 

@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: var(--header-height);
-  background-color: rgba(10, 36, 31, 0.88);
+  background-color: rgba(41, 35, 33, 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-sage-divider);
@@ -13,9 +13,9 @@
 }
 
 .scrolled {
-  background-color: rgba(6, 24, 20, 0.96);
+  background-color: rgba(32, 27, 26, 0.98);
   border-bottom-color: var(--color-sage-border-hover);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
 }
 
 .navContainer {
@@ -53,7 +53,7 @@
 
 .brand:hover .brandMark {
   transform: translateY(-1px);
-  filter: drop-shadow(0 4px 12px rgba(232, 117, 61, 0.25));
+  filter: drop-shadow(0 4px 12px rgba(196, 123, 85, 0.35));
 }
 
 .brandLogoSvg {
@@ -133,7 +133,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--color-orange);
+  background-color: var(--color-burgundy);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--transition-normal);
@@ -155,6 +155,7 @@
 
 .navLinkActive .linkUnderline {
   transform: scaleX(1);
+  background-color: var(--color-burgundy);
 }
 
 /* Action Group */
@@ -263,7 +264,7 @@
   left: 0;
   width: 100%;
   height: calc(100vh - var(--header-height));
-  background-color: rgba(6, 24, 20, 0.98);
+  background-color: rgba(32, 27, 26, 0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   opacity: 0;
@@ -319,19 +320,19 @@
 }
 
 .mobileNavLink:hover {
-  color: var(--color-orange);
-  border-color: rgba(232, 117, 61, 0.3);
+  color: var(--color-copper);
+  border-color: rgba(196, 123, 85, 0.35);
 }
 
 .mobileNavLinkActive {
-  color: var(--color-orange);
+  color: var(--color-ivory);
   font-weight: 700;
-  border-color: var(--color-orange);
+  border-color: var(--color-burgundy);
 }
 
 .mobileNavLinkActive .mobileChevron {
   opacity: 1;
-  color: var(--color-orange);
+  color: var(--color-burgundy);
 }
 
 .mobileChevron {

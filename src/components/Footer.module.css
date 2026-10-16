@@ -2,7 +2,7 @@
   background-color: var(--color-petrol-deeper);
   background-image: radial-gradient(
     ellipse 60% 40% at 85% 0%,
-    rgba(168, 185, 165, 0.028) 0%,
+    rgba(183, 168, 154, 0.04) 0%,
     transparent 70%
   );
   border-top: 1px solid var(--color-sage-divider);
@@ -71,7 +71,7 @@
 
 .brandLink:hover .brandMark {
   transform: translateY(-1px);
-  filter: drop-shadow(0 4px 12px rgba(232, 117, 61, 0.25));
+  filter: drop-shadow(0 4px 12px rgba(196, 123, 85, 0.35));
 }
 
 .brandLogoSvg {

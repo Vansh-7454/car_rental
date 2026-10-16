@@ -1,47 +1,81 @@
 :root {
-  /* Core brand palette */
-  --color-petrol: #123d35;
-  --color-petrol-dark: #0a241f;
-  --color-petrol-deeper: #061814;
-  --color-petrol-surface: #194e44;
-  --color-petrol-surface-hover: #1f5f53;
-  --color-petrol-border: rgba(247, 244, 235, 0.14);
-  --color-petrol-border-strong: rgba(247, 244, 235, 0.26);
+  /* Core brand palette: Deep Espresso x Burgundy x Warm Cream x Soft Ivory x Muted Copper x Taupe x Warm Stone */
+  --color-deep-espresso: #292321;
+  --color-deep-espresso-dark: #201B1A;
+  --color-deep-espresso-deeper: #171312;
+  --color-warm-charcoal: #362E2B;
+  --color-warm-charcoal-light: #423835;
 
-  --color-ivory: #f7f4eb;
-  --color-ivory-light: #fbf9f4;
-  --color-ivory-surface: #ede8dc;
-  --color-ivory-border: rgba(18, 61, 53, 0.12);
+  --color-burgundy: #722F37;
+  --color-burgundy-hover: #883742;
+  --color-burgundy-soft: rgba(114, 47, 55, 0.16);
 
-  --color-orange: #e8753d;
-  --color-orange-hover: #d6652e;
-  --color-orange-soft: rgba(232, 117, 61, 0.14);
-  --color-orange-glow: rgba(232, 117, 61, 0.32);
+  --color-cream: #F3EBDD;
+  --color-cream-light: #FAF7F1;
+  --color-cream-dark: #EAE0D0;
+  --color-cream-border: rgba(41, 35, 33, 0.12);
 
-  /* Subtle Sage Green Supporting Accent (#A8B9A5) */
-  --color-sage: #a8b9a5;
-  --color-sage-border: rgba(168, 185, 165, 0.14);
-  --color-sage-border-hover: rgba(168, 185, 165, 0.28);
-  --color-sage-subtle: rgba(168, 185, 165, 0.05);
-  --color-sage-divider: rgba(168, 185, 165, 0.12);
-  --shadow-sage-card: 0 16px 36px -8px rgba(6, 24, 20, 0.45), 0 0 20px -4px rgba(168, 185, 165, 0.06);
-  --shadow-sage-hover: 0 22px 44px -10px rgba(6, 24, 20, 0.55), 0 0 26px -4px rgba(168, 185, 165, 0.10);
+  --color-ivory: #FAF7F1;
+  --color-ivory-soft: rgba(250, 247, 241, 0.08);
+
+  --color-copper: #C47B55;
+  --color-copper-hover: #b36c46;
+  --color-copper-soft: rgba(196, 123, 85, 0.15);
+  --color-copper-glow: rgba(196, 123, 85, 0.35);
+
+  --color-espresso: #292321;
+  --color-espresso-muted: #5C4F49;
+
+  --color-taupe: #B7A89A;
+  --color-taupe-light: #C9BDAF;
+
+  --color-stone: #DED3C3;
+  --color-stone-border: rgba(222, 211, 195, 0.22);
+  --color-stone-border-strong: rgba(222, 211, 195, 0.38);
+
+  /* Aliased theme variables for full backward compatibility across components */
+  --color-petrol: var(--color-burgundy);
+  --color-petrol-dark: var(--color-deep-espresso);
+  --color-petrol-deeper: var(--color-deep-espresso-dark);
+  --color-petrol-surface: var(--color-warm-charcoal);
+  --color-petrol-surface-hover: var(--color-warm-charcoal-light);
+  --color-petrol-border: var(--color-stone-border);
+  --color-petrol-border-strong: var(--color-stone-border-strong);
+
+  --color-ivory: var(--color-cream-light);
+  --color-ivory-light: #FAF7F1;
+  --color-ivory-surface: var(--color-cream);
+  --color-ivory-border: var(--color-stone);
+
+  --color-orange: var(--color-copper);
+  --color-orange-hover: var(--color-copper-hover);
+  --color-orange-soft: var(--color-copper-soft);
+  --color-orange-glow: var(--color-copper-glow);
+
+  /* Subtle Taupe Supporting Accent (#B7A89A) & Warm Stone (#DED3C3) */
+  --color-sage: var(--color-taupe);
+  --color-sage-border: var(--color-stone-border);
+  --color-sage-border-hover: rgba(196, 123, 85, 0.45);
+  --color-sage-subtle: rgba(222, 211, 195, 0.08);
+  --color-sage-divider: rgba(183, 168, 154, 0.22);
+  --shadow-sage-card: 0 16px 36px -8px rgba(0, 0, 0, 0.45), 0 0 18px -4px rgba(222, 211, 195, 0.06);
+  --shadow-sage-hover: 0 22px 44px -10px rgba(0, 0, 0, 0.55), 0 0 24px -4px rgba(196, 123, 85, 0.16);
 
   /* Neutrals & text */
-  --text-dark: #10211d;
-  --text-dark-muted: #4e635d;
-  --text-light: #f7f4eb;
-  --text-light-muted: rgba(247, 244, 235, 0.76);
-  --text-light-subtle: rgba(247, 244, 235, 0.48);
+  --text-dark: var(--color-espresso);
+  --text-dark-muted: var(--color-espresso-muted);
+  --text-light: var(--color-ivory);
+  --text-light-muted: rgba(250, 247, 241, 0.82);
+  --text-light-subtle: rgba(250, 247, 241, 0.54);
 
   /* Layout tokens */
   --max-width: 1360px;
   --header-height: 80px;
 
   /* Elevation & shadows */
-  --shadow-editorial: 0 24px 48px -12px rgba(6, 24, 20, 0.35);
-  --shadow-detail-card: 0 16px 36px -8px rgba(6, 24, 20, 0.42);
-  --shadow-button: 0 8px 20px -4px rgba(232, 117, 61, 0.35);
+  --shadow-editorial: 0 24px 48px -12px rgba(0, 0, 0, 0.48);
+  --shadow-detail-card: 0 16px 36px -8px rgba(0, 0, 0, 0.42);
+  --shadow-button: 0 8px 20px -4px rgba(196, 123, 85, 0.35);
 
   /* Radius (purposefully restrained and sharp for automotive editorial look) */
   --radius-sm: 4px;

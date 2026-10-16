@@ -27,8 +27,8 @@ export default function Footer() {
                 >
                   <defs>
                     <linearGradient id="footerBadgeGrad" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
-                      <stop offset="0%" stopColor="#194f45" />
-                      <stop offset="100%" stopColor="#0a2620" />
+                      <stop offset="0%" stopColor="#722F37" />
+                      <stop offset="100%" stopColor="#292321" />
                     </linearGradient>
                   </defs>
                   <rect
@@ -38,24 +38,24 @@ export default function Footer() {
                     height="36"
                     rx="9"
                     fill="url(#footerBadgeGrad)"
-                    stroke="rgba(247, 244, 235, 0.38)"
+                    stroke="rgba(250, 247, 241, 0.38)"
                     strokeWidth="1.5"
                   />
                   <path
                     d="M5.5 20.5C7.5 20.5 8.8 19 10.5 16C12.2 13 14.8 11.5 19 11.5C23 11.5 25.5 13 27 16L30.5 19.8"
-                    stroke="#F7F4EB"
+                    stroke="#FAF7F1"
                     strokeWidth="2.2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
-                  <circle cx="30" cy="19.5" r="2.2" fill="#E8753D" />
-                  <circle cx="11.5" cy="22" r="3" stroke="#F7F4EB" strokeWidth="1.8" fill="#0d2e27" />
-                  <circle cx="11.5" cy="22" r="1.1" fill="#E8753D" />
-                  <circle cx="25.5" cy="22" r="3" stroke="#F7F4EB" strokeWidth="1.8" fill="#0d2e27" />
-                  <circle cx="25.5" cy="22" r="1.1" fill="#E8753D" />
-                  <path d="M14.5 22H22.5" stroke="#E8753D" strokeWidth="1.8" strokeLinecap="round" />
-                  <path d="M4 26H18" stroke="rgba(168, 185, 165, 0.6)" strokeWidth="1.4" strokeLinecap="round" />
-                  <path d="M21 26H34" stroke="rgba(247, 244, 235, 0.4)" strokeWidth="1.4" strokeLinecap="round" />
+                  <circle cx="30" cy="19.5" r="2.2" fill="#C47B55" />
+                  <circle cx="11.5" cy="22" r="3" stroke="#FAF7F1" strokeWidth="1.8" fill="#201B1A" />
+                  <circle cx="11.5" cy="22" r="1.1" fill="#C47B55" />
+                  <circle cx="25.5" cy="22" r="3" stroke="#FAF7F1" strokeWidth="1.8" fill="#201B1A" />
+                  <circle cx="25.5" cy="22" r="1.1" fill="#C47B55" />
+                  <path d="M14.5 22H22.5" stroke="#C47B55" strokeWidth="1.8" strokeLinecap="round" />
+                  <path d="M4 26H18" stroke="rgba(183, 168, 154, 0.6)" strokeWidth="1.4" strokeLinecap="round" />
+                  <path d="M21 26H34" stroke="rgba(243, 235, 221, 0.4)" strokeWidth="1.4" strokeLinecap="round" />
                 </svg>
               </span>
               <div className={styles.brandTextGroup}>

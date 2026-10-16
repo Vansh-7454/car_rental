@@ -6,7 +6,7 @@
   background-color: var(--color-petrol-dark);
   background-image: radial-gradient(
     ellipse 65% 55% at 88% 18%,
-    rgba(168, 185, 165, 0.04) 0%,
+    rgba(183, 168, 154, 0.04) 0%,
     transparent 70%
   );
   padding: 4rem 0;
@@ -56,11 +56,11 @@
   inset: 0;
   background: linear-gradient(
     90deg,
-    #0a241f 0%,
-    rgba(10, 36, 31, 0.95) 22%,
-    rgba(10, 36, 31, 0.68) 36%,
-    rgba(10, 36, 31, 0.16) 52%,
-    rgba(10, 36, 31, 0.02) 70%,
+    #292321 0%,
+    rgba(41, 35, 33, 0.95) 22%,
+    rgba(41, 35, 33, 0.68) 36%,
+    rgba(41, 35, 33, 0.16) 52%,
+    rgba(41, 35, 33, 0.02) 70%,
     transparent 100%
   );
 }
@@ -69,9 +69,9 @@
   .gradientLeft {
     background: linear-gradient(
       180deg,
-      rgba(10, 36, 31, 0.94) 0%,
-      rgba(10, 36, 31, 0.88) 55%,
-      rgba(10, 36, 31, 0.72) 100%
+      rgba(41, 35, 33, 0.94) 0%,
+      rgba(41, 35, 33, 0.88) 55%,
+      rgba(41, 35, 33, 0.72) 100%
     );
   }
 }
@@ -81,7 +81,7 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(10, 36, 31, 0.75) 0%,
+    rgba(41, 35, 33, 0.75) 0%,
     transparent 22%,
     transparent 78%,
     var(--color-petrol-dark) 100%
@@ -234,7 +234,7 @@
   font-weight: 600;
   letter-spacing: 0.01em;
   border-radius: var(--radius-sm);
-  box-shadow: 0 4px 18px rgba(232, 117, 61, 0.4);
+  box-shadow: 0 4px 18px rgba(196, 123, 85, 0.35);
   transition: transform var(--transition-normal), background-color var(--transition-normal),
     box-shadow var(--transition-normal);
   text-decoration: none;
@@ -249,7 +249,7 @@
 
 .primaryAction:hover {
   background-color: var(--color-orange-hover);
-  box-shadow: 0 8px 24px rgba(232, 117, 61, 0.5);
+  box-shadow: 0 8px 24px rgba(196, 123, 85, 0.45);
   transform: translateY(-2px);
 }
 
@@ -269,7 +269,7 @@
   justify-content: center;
   gap: 0.625rem;
   padding: 0.95rem 1.5rem;
-  background-color: rgba(10, 36, 31, 0.72);
+  background-color: rgba(41, 35, 33, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--color-sage-border);
@@ -278,7 +278,7 @@
   font-weight: 600;
   letter-spacing: 0.01em;
   border-radius: var(--radius-sm);
-  box-shadow: 0 4px 14px rgba(6, 24, 20, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
   transition: transform 260ms var(--ease-editorial), border-color 260ms var(--ease-editorial),
     background-color 260ms var(--ease-editorial), box-shadow 260ms var(--ease-editorial);
   text-decoration: none;
@@ -292,9 +292,9 @@
 }
 
 .secondaryAction:hover {
-  background-color: rgba(247, 244, 235, 0.14);
+  background-color: rgba(243, 235, 221, 0.14);
   border-color: var(--color-sage-border-hover);
-  box-shadow: 0 8px 24px rgba(6, 24, 20, 0.5), 0 0 16px -4px rgba(168, 185, 165, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 16px -4px rgba(196, 123, 85, 0.12);
   transform: translateY(-2px);
 }
 
